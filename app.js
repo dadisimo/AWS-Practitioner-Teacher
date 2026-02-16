@@ -169,21 +169,21 @@ function selectAnswer(selectedIndex) {
             : 'Complete Quiz';
         nextButton.onclick = nextQuestion;
         feedbackDiv.appendChild(nextButton);
-    }all correct!
-        completeSection(); section = state.currentSection;
+    }
+    
+    saveProgress();
+}
+
+// Move to next question
+function nextQuestion() {
+    const section = state.currentSection;
     
     if (state.currentQuestionIndex < section.questions.length - 1) {
         state.currentQuestionIndex++;
         displayQuestion();
     } else {
-        // Quiz completed - check for wrong answers
-        if (state.wrongAnswers.length > 0) {
-            // Show documentation for first wrong answer
-            showDocumentation();
-        } else {
-            // All correct - section completed!
-            completeSection();
-        }
+        // Quiz completed - all correct!
+        completeSection();
     }
 }
 
@@ -204,9 +204,6 @@ function showDocumentation() {
 function startFollowUpQuestions() {
     const section = state.currentSection;
     
-    
-    // Scroll to top
-    window.scrollTo(0, 0);
     // Shuffle follow-up questions
     state.followUpQuestions = shuffleArray([...section.followUpQuestions]);
     state.followUpIndex = 0;
@@ -214,6 +211,9 @@ function startFollowUpQuestions() {
     
     showScreen('followup-screen');
     displayFollowUpQuestion();
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
 }
 
 // Display follow-up question
