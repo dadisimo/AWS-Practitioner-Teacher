@@ -263,10 +263,7 @@ function selectFollowUpAnswer(selectedIndex) {
         
         // Check if completed
         if (state.followUpCorrect >= 3) {
-            setTimeout(() => {
-                completeSection();
-            }, 1500);
-        } el// Passed the follow-up quiz
+            // Passed the follow-up quiz
             if (state.needsRemediation) {
                 // Return to the main quiz at the next question
                 state.needsRemediation = false;
@@ -287,7 +284,10 @@ function selectFollowUpAnswer(selectedIndex) {
                 setTimeout(() => {
                     completeSection();
                 }, 1500);
-            }tButton = document.createElement('button');
+            }
+        } else {
+            // Show next button
+            const nextButton = document.createElement('button');
             nextButton.className = 'btn btn-primary next-btn';
             nextButton.textContent = 'Next Question';
             nextButton.onclick = nextFollowUpQuestion;
