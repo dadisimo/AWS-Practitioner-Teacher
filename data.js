@@ -150,6 +150,106 @@ const awsData = {
                     ],
                     correct: 1,
                     explanation: 'Loose coupling means designing components with minimal dependencies, so changes or failures in one component don\'t cascade to others.'
+                },
+                {
+                    id: 13,
+                    question: 'How many Availability Zones are typically in an AWS Region?',
+                    options: [
+                        'Always exactly 2',
+                        'At least 3, usually more',
+                        'Only 1',
+                        'Depends on the pricing tier'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Regions typically have at least 3 Availability Zones, but some have more to provide redundancy and fault tolerance.'
+                },
+                {
+                    id: 14,
+                    question: 'What advantage of cloud computing allows you to deploy applications in multiple locations worldwide?',
+                    options: [
+                        'Stop guessing capacity',
+                        'Trade capital expense for variable expense',
+                        'Go global in minutes',
+                        'Benefit from economies of scale'
+                    ],
+                    correct: 2,
+                    explanation: 'Cloud computing enables you to deploy applications in multiple AWS Regions around the world with just a few clicks, reducing latency for global users.'
+                },
+                {
+                    id: 15,
+                    question: 'In the context of AWS, what does "scaling out" refer to?',
+                    options: [
+                        'Increasing the size of existing instances',
+                        'Adding more instances to handle increased load',
+                        'Removing unused resources',
+                        'Moving to a different region'
+                    ],
+                    correct: 1,
+                    explanation: 'Scaling out (horizontal scaling) means adding more instances to distribute the workload, rather than making existing instances larger.'
+                },
+                {
+                    id: 16,
+                    question: 'Which pillar of the Well-Architected Framework focuses on environmental impact?',
+                    options: [
+                        'Cost Optimization',
+                        'Operational Excellence',
+                        'Sustainability',
+                        'Performance Efficiency'
+                    ],
+                    correct: 2,
+                    explanation: 'The Sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads.'
+                },
+                {
+                    id: 17,
+                    question: 'What type of cloud model delivers applications over the internet that are managed by a third party?',
+                    options: [
+                        'Infrastructure as a Service (IaaS)',
+                        'Platform as a Service (PaaS)',
+                        'Software as a Service (SaaS)',
+                        'Function as a Service (FaaS)'
+                    ],
+                    correct: 2,
+                    explanation: 'SaaS delivers fully managed applications over the internet, like Gmail, Salesforce, or Office 365.'
+                },
+                {
+                    id: 18,
+                    question: 'Under the Shared Responsibility Model, who is responsible for patching the guest operating system?',
+                    options: [
+                        'AWS for all services',
+                        'Customer for IaaS services like EC2',
+                        'AWS and customer together',
+                        'Neither, it happens automatically'
+                    ],
+                    correct: 1,
+                    explanation: 'For IaaS services like EC2, customers are responsible for patching the guest OS. For managed services, AWS handles this.'
+                },
+                {
+                    id: 19,
+                    question: 'Which statement best describes cloud computing?',
+                    options: [
+                        'On-demand delivery of IT resources via the internet with pay-as-you-go pricing',
+                        'Managing your own data centers',
+                        'Using only open-source software',
+                        'Storing all data on local hard drives'
+                    ],
+                    correct: 0,
+                    explanation: 'Cloud computing is the on-demand delivery of compute power, database, storage, and other IT resources through the internet with pay-as-you-go pricing.'
+                },
+                {
+                    id: 20,
+                    question: 'What does fault tolerance mean in AWS architecture?',
+                    options: [
+                        'The system never fails',
+                        'The system can continue operating despite component failures',
+                        'The system is immune to attacks',
+                        'The system has no bugs'
+                    ],
+                    correct: 1,
+                    explanation: 'Fault tolerance means the system can continue to operate properly even when some of its components fail, often through redundancy.'
+                }
+            ],
+                    correct: 1,
+                    explanation: 'Loose coupling means designing components with minimal dependencies, so changes or failures in one component don\'t cascade to others.'
                 }
             ],
             documentation: `
@@ -400,6 +500,102 @@ const awsData = {
                     ],
                     correct: 1,
                     explanation: 'The root user has complete access to all AWS resources and should be protected with MFA and used sparingly.'
+                },
+                {
+                    id: 13,
+                    question: 'Which IAM entity should you use to grant permissions to an AWS service?',
+                    options: [
+                        'IAM User',
+                        'IAM Group',
+                        'IAM Role',
+                        'IAM Password Policy'
+                    ],
+                    correct: 2,
+                    explanation: 'IAM Roles are used to grant permissions to AWS services, applications, or users from another account without sharing long-term credentials.'
+                },
+                {
+                    id: 14,
+                    question: 'What does AWS CloudTrail primarily record?',
+                    options: [
+                        'Application logs',
+                        'API calls and account activity',
+                        'Performance metrics',
+                        'Database queries'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS CloudTrail records API calls and account activity, providing a history of AWS resource changes and user actions.'
+                },
+                {
+                    id: 15,
+                    question: 'Which security service provides DDoS protection?',
+                    options: [
+                        'AWS WAF',
+                        'AWS Shield',
+                        'Amazon Inspector',
+                        'AWS KMS'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Shield is a managed DDoS protection service. AWS Shield Standard is free, while Shield Advanced provides enhanced protection.'
+                },
+                {
+                    id: 16,
+                    question: 'What is the purpose of IAM policies?',
+                    options: [
+                        'To monitor AWS resources',
+                        'To define permissions - what actions are allowed or denied',
+                        'To encrypt data',
+                        'To create virtual networks'
+                    ],
+                    correct: 1,
+                    explanation: 'IAM policies are JSON documents that define permissions by specifying which actions are allowed or denied on which resources.'
+                },
+                {
+                    id: 17,
+                    question: 'Security Groups act as a virtual firewall at which level?',
+                    options: [
+                        'Region level',
+                        'VPC level',
+                        'Instance level',
+                        'Account level'
+                    ],
+                    correct: 2,
+                    explanation: 'Security Groups act as a virtual firewall at the instance level, controlling inbound and outbound traffic. They are stateful.'
+                },
+                {
+                    id: 18,
+                    question: 'What compliance program is specifically for healthcare data?',
+                    options: [
+                        'PCI DSS',
+                        'HIPAA',
+                        'SOC 2',
+                        'GDPR'
+                    ],
+                    correct: 1,
+                    explanation: 'HIPAA (Health Insurance Portability and Accountability Act) is the compliance program for protecting patient health information.'
+                },
+                {
+                    id: 19,
+                    question: 'Which service helps you assess, audit, and evaluate configurations of AWS resources?',
+                    options: [
+                        'AWS CloudTrail',
+                        'AWS Config',
+                        'Amazon CloudWatch',
+                        'AWS X-Ray'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Config continuously monitors and records AWS resource configurations and allows you to evaluate them against desired configurations.'
+                },
+                {
+                    id: 20,
+                    question: 'What should you enable on your AWS root account as a security best practice?',
+                    options: [
+                        'Password sharing',
+                        'Multi-Factor Authentication (MFA)',
+                        'Public access',
+                        'Anonymous login'
+                    ],
+                    correct: 1,
+                    explanation: 'Enabling MFA on the root account adds an essential layer of security and is a critical security best practice.'
                 }
             ],
             documentation: `
@@ -672,6 +868,102 @@ const awsData = {
                     ],
                     correct: 0,
                     explanation: 'AWS Auto Scaling monitors applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest cost.'
+                },
+                {
+                    id: 13,
+                    question: 'Which storage class is best for data that needs to be archived for years?',
+                    options: [
+                        'S3 Standard',
+                        'S3 Intelligent-Tiering',
+                        'S3 Glacier Deep Archive',
+                        'S3 One Zone-IA'
+                    ],
+                    correct: 2,
+                    explanation: 'S3 Glacier Deep Archive is the lowest-cost storage class for long-term archive and digital preservation, with retrieval times of 12 hours.'
+                },
+                {
+                    id: 14,
+                    question: 'What is Amazon Aurora?',
+                    options: [
+                        'A NoSQL database',
+                        'A MySQL and PostgreSQL-compatible relational database',
+                        'An in-memory cache',
+                        'A data warehouse'
+                    ],
+                    correct: 1,
+                    explanation: 'Amazon Aurora is a MySQL and PostgreSQL-compatible relational database that is up to 5 times faster than MySQL and 3 times faster than PostgreSQL.'
+                },
+                {
+                    id: 15,
+                    question: 'Which service queues messages between distributed application components?',
+                    options: [
+                        'Amazon SQS',
+                        'Amazon SNS',
+                        'AWS Lambda',
+                        'Amazon EC2'
+                    ],
+                    correct: 0,
+                    explanation: 'Amazon SQS (Simple Queue Service) is a message queuing service that decouples and scales microservices, distributed systems, and serverless applications.'
+                },
+                {
+                    id: 16,
+                    question: 'What type of database is Amazon DynamoDB?',
+                    options: [
+                        'Relational SQL database',
+                        'Key-value and document NoSQL database',
+                        'Graph database',
+                        'Time-series database'
+                    ],
+                    correct: 1,
+                    explanation: 'DynamoDB is a fully managed NoSQL database that supports both key-value and document data models.'
+                },
+                {
+                    id: 17,
+                    question: 'Which EC2 pricing option offers up to 90% discount but can be interrupted?',
+                    options: [
+                        'On-Demand',
+                        'Reserved Instances',
+                        'Spot Instances',
+                        'Dedicated Hosts'
+                    ],
+                    correct: 2,
+                    explanation: 'Spot Instances let you use spare EC2 capacity at up to 90% discount, but AWS can reclaim them with a 2-minute warning.'
+                },
+                {
+                    id: 18,
+                    question: 'What is Amazon EFS used for?',
+                    options: [
+                        'Object storage',
+                        'Block storage for EC2',
+                        'Shared file storage that can be mounted by multiple EC2 instances',
+                        'Database storage'
+                    ],
+                    correct: 2,
+                    explanation: 'Amazon EFS (Elastic File System) provides scalable file storage that can be concurrently accessed by multiple EC2 instances.'
+                },
+                {
+                    id: 19,
+                    question: 'Which service manages Kubernetes on AWS?',
+                    options: [
+                        'Amazon ECS',
+                        'Amazon EKS',
+                        'AWS Lambda',
+                        'AWS Fargate'
+                    ],
+                    correct: 1,
+                    explanation: 'Amazon EKS (Elastic Kubernetes Service) is a managed Kubernetes service that makes it easy to run Kubernetes on AWS.'
+                },
+                {
+                    id: 20,
+                    question: 'What is Amazon Redshift used for?',
+                    options: [
+                        'Web hosting',
+                        'Data warehousing and analytics',
+                        'File storage',
+                        'Email services'
+                    ],
+                    correct: 1,
+                    explanation: 'Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze data using SQL and existing BI tools.'
                 }
             ],
             documentation: `
@@ -1027,6 +1319,102 @@ const awsData = {
                     ],
                     correct: 1,
                     explanation: 'S3 charges based on: storage amount (GB-month), number of requests (PUT, GET), and data transfer out of S3.'
+                },
+                {
+                    id: 13,
+                    question: 'Which support plan provides a Technical Account Manager (TAM)?',
+                    options: [
+                        'Basic',
+                        'Developer',
+                        'Business',
+                        'Enterprise'
+                    ],
+                    correct: 3,
+                    explanation: 'The Enterprise support plan includes a dedicated Technical Account Manager (TAM) who provides proactive guidance.'
+                },
+                {
+                    id: 14,
+                    question: 'What Reserved Instance term options are available?',
+                    options: [
+                        '1 month or 6 months',
+                        '1 year or 3 years',
+                        '2 years or 5 years',
+                        'Only annual contracts'
+                    ],
+                    correct: 1,
+                    explanation: 'Reserved Instances can be purchased for 1-year or 3-year terms, with 3-year terms providing larger discounts.'
+                },
+                {
+                    id: 15,
+                    question: 'Which tool helps you create cost estimates before deploying resources?',
+                    options: [
+                        'AWS Cost Explorer',
+                        'AWS Budgets',
+                        'AWS Pricing Calculator',
+                        'AWS Cost and Usage Report'
+                    ],
+                    correct: 2,
+                    explanation: 'AWS Pricing Calculator helps you estimate costs for your AWS use case before you deploy resources.'
+                },
+                {
+                    id: 16,
+                    question: 'What is a benefit of AWS consolidated billing?',
+                    options: [
+                        'Separate invoices for each account',
+                        'Combined usage across accounts for potential volume discounts',
+                        'Automatic cost reduction',
+                        'Free AWS support'
+                    ],
+                    correct: 1,
+                    explanation: 'Consolidated billing combines usage across all accounts in an organization, helping you reach volume discount tiers faster.'
+                },
+                {
+                    id: 17,
+                    question: 'Which AWS service is always free (not time-limited)?',
+                    options: [
+                        'Amazon EC2 t2.micro',
+                        'AWS Lambda (within limits)',
+                        'Amazon RDS',
+                        'Amazon S3 (all storage)'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Lambda includes 1 million free requests per month permanently, not limited to 12 months like some Free Tier offerings.'
+                },
+                {
+                    id: 18,
+                    question: 'How can you track costs by project or department?',
+                    options: [
+                        'Create separate AWS accounts',
+                        'Use resource tags',
+                        'Use different regions',
+                        'It\'s not possible'
+                    ],
+                    correct: 1,
+                    explanation: 'Resource tags allow you to categorize and track costs by project, department, environment, or any custom dimension.'
+                },
+                {
+                    id: 19,
+                    question: 'What is the minimum Enterprise Support plan cost per month?',
+                    options: [
+                        'Free',
+                        '$100',
+                        '$1,000',
+                        '$15,000'
+                    ],
+                    correct: 3,
+                    explanation: 'Enterprise Support starts at $15,000 per month or 3-10% of monthly AWS usage, whichever is higher.'
+                },
+                {
+                    id: 20,
+                    question: 'Which pricing model requires you to commit to a specific instance type and region?',
+                    options: [
+                        'On-Demand',
+                        'Spot Instances',
+                        'Standard Reserved Instances',
+                        'Savings Plans'
+                    ],
+                    correct: 2,
+                    explanation: 'Standard Reserved Instances require commitment to instance type, region, and platform, offering the highest discount but least flexibility.'
                 }
             ],
             documentation: `
@@ -1379,6 +1767,102 @@ const awsData = {
                     ],
                     correct: 1,
                     explanation: 'Amazon EventBridge is a serverless event bus that makes it easy to connect applications using data from your own apps, SaaS, and AWS services.'
+                },
+                {
+                    id: 13,
+                    question: 'What format does AWS CloudFormation use for templates?',
+                    options: [
+                        'Only XML',
+                        'Only Python',
+                        'JSON or YAML',
+                        'Only CSV'
+                    ],
+                    correct: 2,
+                    explanation: 'CloudFormation templates can be written in JSON or YAML format to define your AWS infrastructure as code.'
+                },
+                {
+                    id: 14,
+                    question: 'Which service helps you centrally manage multiple AWS accounts?',
+                    options: [
+                        'AWS CloudTrail',
+                        'AWS Organizations',
+                        'Amazon CloudWatch',
+                        'AWS Lambda'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Organizations lets you centrally govern your environment as you grow and scale your AWS resources across multiple accounts.'
+                },
+                {
+                    id: 15,
+                    question: 'What does Amazon CloudWatch Logs do?',
+                    options: [
+                        'Only monitors EC2 instances',
+                        'Collects and stores log files from AWS services and applications',
+                        'Only tracks billing',
+                        'Only monitors databases'
+                    ],
+                    correct: 1,
+                    explanation: 'CloudWatch Logs enables you to centralize logs from all your systems, applications, and AWS services in a single service.'
+                },
+                {
+                    id: 16,
+                    question: 'What is AWS Service Catalog used for?',
+                    options: [
+                        'Listing all AWS services',
+                        'Creating and managing catalogs of approved IT services',
+                        'Monitoring resources',
+                        'Backing up data'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS.'
+                },
+                {
+                    id: 17,
+                    question: 'Which tool provides best practice recommendations for cost optimization, security, and performance?',
+                    options: [
+                        'AWS Config',
+                        'AWS CloudTrail',
+                        'AWS Trusted Advisor',
+                        'Amazon Inspector'
+                    ],
+                    correct: 2,
+                    explanation: 'AWS Trusted Advisor checks your AWS environment and provides recommendations across five categories including cost, security, and performance.'
+                },
+                {
+                    id: 18,
+                    question: 'What does AWS Systems Manager Session Manager allow you to do?',
+                    options: [
+                        'Only monitor instances',
+                        'Securely connect to EC2 instances without SSH keys or bastion hosts',
+                        'Only create backups',
+                        'Only manage billing'
+                    ],
+                    correct: 1,
+                    explanation: 'Session Manager provides secure and auditable instance management without needing to open inbound ports, maintain bastion hosts, or manage SSH keys.'
+                },
+                {
+                    id: 19,
+                    question: 'Which service enables you to set up and enforce guardrails for your multi-account environment?',
+                    options: [
+                        'AWS CloudFormation',
+                        'AWS Control Tower',
+                        'AWS Lambda',
+                        'Amazon S3'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Control Tower uses guardrails (preventive and detective) to enforce policies and detect policy violations in your multi-account environment.'
+                },
+                {
+                    id: 20,
+                    question: 'What can you use to track configuration changes to AWS resources over time?',
+                    options: [
+                        'AWS Cost Explorer',
+                        'AWS Config',
+                        'AWS Pricing Calculator',
+                        'Amazon S3'
+                    ],
+                    correct: 1,
+                    explanation: 'AWS Config continuously tracks configuration changes, allowing you to see what changed, who changed it, and when it was changed.'
                 }
             ],
             documentation: `

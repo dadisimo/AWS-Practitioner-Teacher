@@ -82,7 +82,13 @@ function startSection(sectionId) {
     const section = awsData.sections.find(s => s.id === sectionId);
     if (!section) return;
     
-    state.currentSection = section;
+    // Create a shuffled copy of questions for this session
+    const shuffledQuestions = shuffleArray([...section.questions]);
+    
+    state.currentSection = {
+        ...section,
+        questions: shuffledQuestions
+    };
     state.currentQuestionIndex = 0;
     state.wrongAnswers = [];
     
