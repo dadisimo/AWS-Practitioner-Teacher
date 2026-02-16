@@ -1,0 +1,301 @@
+{
+  "id": "cloud-concepts",
+  "title": "Cloud Concepts & Architecture",
+  "icon": "☁️",
+  "description": "Learn AWS Cloud fundamentals, benefits, and architectural principles",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the AWS Well-Architected Framework's primary purpose?",
+      "options": [
+        "To provide guidance on building secure, high-performing, resilient, and efficient infrastructure",
+        "To automatically configure AWS resources",
+        "To reduce AWS costs only",
+        "To create virtual machines"
+      ],
+      "correct": 0,
+      "explanation": "The AWS Well-Architected Framework helps cloud architects build secure, high-performing, resilient, and efficient infrastructure."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following are pillars of the AWS Well-Architected Framework? (Select all that apply)",
+      "options": [
+        "Operational Excellence",
+        "Security",
+        "Reliability",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "The six pillars are: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, and Sustainability."
+    },
+    {
+      "id": 3,
+      "question": "What does \"elasticity\" mean in cloud computing?",
+      "options": [
+        "The ability to stretch physical hardware",
+        "The ability to automatically scale resources up or down based on demand",
+        "The flexibility of AWS pricing",
+        "The durability of data storage"
+      ],
+      "correct": 1,
+      "explanation": "Elasticity is the ability to acquire resources as you need them and release them when you no longer need them, scaling automatically with demand."
+    },
+    {
+      "id": 4,
+      "question": "What is the difference between vertical and horizontal scaling?",
+      "options": [
+        "Vertical adds more instances, horizontal adds more power to existing instances",
+        "Vertical adds more power to existing instances, horizontal adds more instances",
+        "There is no difference",
+        "Vertical is for databases only, horizontal is for web servers only"
+      ],
+      "correct": 1,
+      "explanation": "Vertical scaling (scale up) means adding more power (CPU, RAM) to existing instances. Horizontal scaling (scale out) means adding more instances."
+    },
+    {
+      "id": 5,
+      "question": "Which AWS service would you use to distribute incoming application traffic across multiple targets?",
+      "options": [
+        "Amazon S3",
+        "AWS Lambda",
+        "Elastic Load Balancer (ELB)",
+        "Amazon RDS"
+      ],
+      "correct": 2,
+      "explanation": "Elastic Load Balancer automatically distributes incoming application traffic across multiple targets, such as EC2 instances."
+    },
+    {
+      "id": 6,
+      "question": "What is the AWS Shared Responsibility Model?",
+      "options": [
+        "AWS is responsible for everything",
+        "Customers are responsible for everything",
+        "AWS is responsible for security OF the cloud, customers are responsible for security IN the cloud",
+        "AWS and customers share all responsibilities equally"
+      ],
+      "correct": 2,
+      "explanation": "AWS manages security OF the cloud (infrastructure), while customers manage security IN the cloud (data, applications, configurations)."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is a benefit of cloud computing?",
+      "options": [
+        "Trade capital expense for variable expense",
+        "Increased need for data center maintenance",
+        "Increased upfront costs",
+        "Decreased scalability"
+      ],
+      "correct": 0,
+      "explanation": "Cloud computing allows you to trade capital expense (upfront costs) for variable expense (pay only for what you use)."
+    },
+    {
+      "id": 8,
+      "question": "What does \"high availability\" mean in AWS?",
+      "options": [
+        "Resources are available only during business hours",
+        "Systems are designed to operate continuously without failure for a long time",
+        "Resources are expensive",
+        "Resources are fast"
+      ],
+      "correct": 1,
+      "explanation": "High availability means designing systems to operate continuously without failure for a designated period, often using multiple Availability Zones."
+    },
+    {
+      "id": 9,
+      "question": "What is an AWS Region?",
+      "options": [
+        "A single data center",
+        "A geographic area that contains multiple Availability Zones",
+        "A type of EC2 instance",
+        "A pricing tier"
+      ],
+      "correct": 1,
+      "explanation": "An AWS Region is a geographic area that contains multiple physically separated Availability Zones, providing fault tolerance and stability."
+    },
+    {
+      "id": 10,
+      "question": "What is an AWS Availability Zone?",
+      "options": [
+        "A pricing zone",
+        "One or more discrete data centers with redundant power, networking, and connectivity",
+        "A security feature",
+        "A type of storage"
+      ],
+      "correct": 1,
+      "explanation": "An Availability Zone consists of one or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities."
+    },
+    {
+      "id": 11,
+      "question": "Which deployment model is best for maintaining legacy systems while adopting cloud services?",
+      "options": [
+        "Cloud-only deployment",
+        "Hybrid deployment",
+        "On-premises only",
+        "Multi-cloud deployment"
+      ],
+      "correct": 1,
+      "explanation": "Hybrid deployment connects on-premises infrastructure with cloud resources, ideal for maintaining legacy systems while adopting cloud services."
+    },
+    {
+      "id": 12,
+      "question": "What is the principle of \"loose coupling\" in cloud architecture?",
+      "options": [
+        "Components are tightly integrated",
+        "Components are designed to have minimal dependencies on each other",
+        "Components must all be in the same Region",
+        "Components share the same database"
+      ],
+      "correct": 1,
+      "explanation": "Loose coupling means designing components with minimal dependencies, so changes or failures in one component don't cascade to others."
+    },
+    {
+      "id": 13,
+      "question": "How many Availability Zones are typically in an AWS Region?",
+      "options": [
+        "Always exactly 2",
+        "At least 3, usually more",
+        "Only 1",
+        "Depends on the pricing tier"
+      ],
+      "correct": 1,
+      "explanation": "AWS Regions typically have at least 3 Availability Zones, but some have more to provide redundancy and fault tolerance."
+    },
+    {
+      "id": 14,
+      "question": "What advantage of cloud computing allows you to deploy applications in multiple locations worldwide?",
+      "options": [
+        "Stop guessing capacity",
+        "Trade capital expense for variable expense",
+        "Go global in minutes",
+        "Benefit from economies of scale"
+      ],
+      "correct": 2,
+      "explanation": "Cloud computing enables you to deploy applications in multiple AWS Regions around the world with just a few clicks, reducing latency for global users."
+    },
+    {
+      "id": 15,
+      "question": "In the context of AWS, what does \"scaling out\" refer to?",
+      "options": [
+        "Increasing the size of existing instances",
+        "Adding more instances to handle increased load",
+        "Removing unused resources",
+        "Moving to a different region"
+      ],
+      "correct": 1,
+      "explanation": "Scaling out (horizontal scaling) means adding more instances to distribute the workload, rather than making existing instances larger."
+    },
+    {
+      "id": 16,
+      "question": "Which pillar of the Well-Architected Framework focuses on environmental impact?",
+      "options": [
+        "Cost Optimization",
+        "Operational Excellence",
+        "Sustainability",
+        "Performance Efficiency"
+      ],
+      "correct": 2,
+      "explanation": "The Sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads."
+    },
+    {
+      "id": 17,
+      "question": "What type of cloud model delivers applications over the internet that are managed by a third party?",
+      "options": [
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Software as a Service (SaaS)",
+        "Function as a Service (FaaS)"
+      ],
+      "correct": 2,
+      "explanation": "SaaS delivers fully managed applications over the internet, like Gmail, Salesforce, or Office 365."
+    },
+    {
+      "id": 18,
+      "question": "Under the Shared Responsibility Model, who is responsible for patching the guest operating system?",
+      "options": [
+        "AWS for all services",
+        "Customer for IaaS services like EC2",
+        "AWS and customer together",
+        "Neither, it happens automatically"
+      ],
+      "correct": 1,
+      "explanation": "For IaaS services like EC2, customers are responsible for patching the guest OS. For managed services, AWS handles this."
+    },
+    {
+      "id": 19,
+      "question": "Which statement best describes cloud computing?",
+      "options": [
+        "On-demand delivery of IT resources via the internet with pay-as-you-go pricing",
+        "Managing your own data centers",
+        "Using only open-source software",
+        "Storing all data on local hard drives"
+      ],
+      "correct": 0,
+      "explanation": "Cloud computing is the on-demand delivery of compute power, database, storage, and other IT resources through the internet with pay-as-you-go pricing."
+    },
+    {
+      "id": 20,
+      "question": "What does fault tolerance mean in AWS architecture?",
+      "options": [
+        "The system never fails",
+        "The system can continue operating despite component failures",
+        "The system is immune to attacks",
+        "The system has no bugs"
+      ],
+      "correct": 1,
+      "explanation": "Fault tolerance means the system can continue to operate properly even when some of its components fail, often through redundancy."
+    }
+  ],
+  "documentation": "\n                <h3>Cloud Concepts & Architecture</h3>\n                \n                <h4>What is Cloud Computing?</h4>\n                <p>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services on an as-needed basis.</p>\n\n                <h4>Six Advantages of Cloud Computing:</h4>\n                <ol>\n                    <li><strong>Trade capital expense for variable expense:</strong> Pay only for what you consume instead of investing in data centers upfront</li>\n                    <li><strong>Benefit from massive economies of scale:</strong> Lower variable costs due to AWS's scale</li>\n                    <li><strong>Stop guessing capacity:</strong> Scale up or down based on actual needs</li>\n                    <li><strong>Increase speed and agility:</strong> Reduce time to make resources available from weeks to minutes</li>\n                    <li><strong>Stop spending money on data center operations:</strong> Focus on customers rather than infrastructure</li>\n                    <li><strong>Go global in minutes:</strong> Deploy applications worldwide quickly</li>\n                </ol>\n\n                <h4>Types of Cloud Computing:</h4>\n                <ul>\n                    <li><strong>Infrastructure as a Service (IaaS):</strong> Basic building blocks - compute, storage, networking (EC2, S3)</li>\n                    <li><strong>Platform as a Service (PaaS):</strong> Remove need to manage infrastructure (Elastic Beanstalk, RDS)</li>\n                    <li><strong>Software as a Service (SaaS):</strong> Completed product managed by service provider (Gmail, Office 365)</li>\n                </ul>\n\n                <h4>Cloud Deployment Models:</h4>\n                <ul>\n                    <li><strong>Cloud:</strong> Everything runs in the cloud (startups, new applications)</li>\n                    <li><strong>Hybrid:</strong> Connects cloud resources with on-premises infrastructure (banks, legacy systems)</li>\n                    <li><strong>On-Premises (Private Cloud):</strong> Resources deployed on-premises using virtualization</li>\n                </ul>\n\n                <h4>AWS Global Infrastructure:</h4>\n                <ul>\n                    <li><strong>Regions:</strong> Geographic areas containing multiple Availability Zones (e.g., us-east-1, eu-west-1)</li>\n                    <li><strong>Availability Zones (AZs):</strong> One or more discrete data centers with redundant power, networking, and connectivity</li>\n                    <li><strong>Edge Locations:</strong> Used by CloudFront for content delivery (caching)</li>\n                </ul>\n\n                <h4>AWS Well-Architected Framework - Six Pillars:</h4>\n                <ol>\n                    <li><strong>Operational Excellence:</strong> Run and monitor systems to deliver business value</li>\n                    <li><strong>Security:</strong> Protect information, systems, and assets</li>\n                    <li><strong>Reliability:</strong> Recover from failures and meet demand</li>\n                    <li><strong>Performance Efficiency:</strong> Use resources efficiently</li>\n                    <li><strong>Cost Optimization:</strong> Avoid unnecessary costs</li>\n                    <li><strong>Sustainability:</strong> Minimize environmental impact</li>\n                </ol>\n\n                <h4>Key Architectural Concepts:</h4>\n                <ul>\n                    <li><strong>Scalability:</strong> Ability to handle growth (vertical = more power, horizontal = more instances)</li>\n                    <li><strong>Elasticity:</strong> Automatically scale resources based on demand</li>\n                    <li><strong>High Availability:</strong> Systems operate continuously without failure</li>\n                    <li><strong>Fault Tolerance:</strong> System continues to operate despite component failures</li>\n                    <li><strong>Loose Coupling:</strong> Components have minimal dependencies on each other</li>\n                </ul>\n\n                <h4>AWS Shared Responsibility Model:</h4>\n                <p><strong>AWS Responsibility (Security OF the Cloud):</strong></p>\n                <ul>\n                    <li>Physical infrastructure (data centers, hardware)</li>\n                    <li>Network infrastructure</li>\n                    <li>Hypervisor and virtualization layer</li>\n                </ul>\n                <p><strong>Customer Responsibility (Security IN the Cloud):</strong></p>\n                <ul>\n                    <li>Customer data</li>\n                    <li>Platform, applications, Identity & Access Management</li>\n                    <li>Operating system, network, and firewall configuration</li>\n                    <li>Encryption (data at rest and in transit)</li>\n                </ul>\n            ",
+  "followUpQuestions": [
+    {
+      "question": "Which pillar of the Well-Architected Framework focuses on minimizing environmental impact?",
+      "options": [
+        "Cost Optimization",
+        "Operational Excellence",
+        "Sustainability",
+        "Performance Efficiency"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In the Shared Responsibility Model, who is responsible for encrypting customer data?",
+      "options": [
+        "AWS only",
+        "Customer only",
+        "Both AWS and Customer",
+        "Neither"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the minimum number of Availability Zones in an AWS Region?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which type of scaling adds more instances rather than more power?",
+      "options": [
+        "Vertical scaling",
+        "Horizontal scaling",
+        "Diagonal scaling",
+        "Linear scaling"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What advantage of cloud computing refers to reducing time to provision resources?",
+      "options": [
+        "Economies of scale",
+        "Go global in minutes",
+        "Increase speed and agility",
+        "Stop guessing capacity"
+      ],
+      "correct": 2
+    }
+  ]
+}

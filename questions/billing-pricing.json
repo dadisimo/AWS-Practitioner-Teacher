@@ -1,0 +1,301 @@
+{
+  "id": "billing-pricing",
+  "title": "Billing & Pricing",
+  "icon": "💰",
+  "description": "Understand AWS pricing models, cost management, and billing tools",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the AWS Free Tier?",
+      "options": [
+        "Free AWS services forever",
+        "Limited free usage of services for 12 months plus always-free services",
+        "A discount program for students only",
+        "Free support from AWS"
+      ],
+      "correct": 1,
+      "explanation": "AWS Free Tier includes 12 months of free tier services, always-free services, and short-term free trials for certain services."
+    },
+    {
+      "id": 2,
+      "question": "What are the three AWS pricing models?",
+      "options": [
+        "Hourly, Daily, Monthly",
+        "Pay-as-you-go, Save when you reserve, Pay less by using more",
+        "Free, Standard, Premium",
+        "Basic, Professional, Enterprise"
+      ],
+      "correct": 1,
+      "explanation": "AWS uses three pricing models: Pay-as-you-go (on-demand), Save when you reserve (Reserved Instances), and Pay less by using more (volume discounts)."
+    },
+    {
+      "id": 3,
+      "question": "What is AWS Cost Explorer?",
+      "options": [
+        "A tool to visualize and manage AWS costs and usage over time",
+        "A service to deploy applications",
+        "A monitoring service",
+        "A security service"
+      ],
+      "correct": 0,
+      "explanation": "AWS Cost Explorer helps you visualize, understand, and manage AWS costs and usage over time with custom reports."
+    },
+    {
+      "id": 4,
+      "question": "What are Reserved Instances?",
+      "options": [
+        "Instances that are always running",
+        "A commitment to use EC2 for 1 or 3 years in exchange for significant discounts",
+        "Backup instances",
+        "Free instances"
+      ],
+      "correct": 1,
+      "explanation": "Reserved Instances provide up to 75% discount compared to On-Demand pricing in exchange for a 1 or 3-year commitment."
+    },
+    {
+      "id": 5,
+      "question": "What are Spot Instances?",
+      "options": [
+        "Premium instances with guaranteed availability",
+        "Unused EC2 capacity available at up to 90% discount",
+        "Free instances",
+        "Instances for testing only"
+      ],
+      "correct": 1,
+      "explanation": "Spot Instances let you take advantage of unused EC2 capacity at discounts up to 90%, but can be interrupted with 2-minute notice."
+    },
+    {
+      "id": 6,
+      "question": "What is AWS Budgets?",
+      "options": [
+        "A financial planning service",
+        "A tool to set custom cost and usage budgets with alerts",
+        "A payment method",
+        "A discount program"
+      ],
+      "correct": 1,
+      "explanation": "AWS Budgets allows you to set custom budgets that alert you when costs or usage exceed (or are forecasted to exceed) your budgeted amount."
+    },
+    {
+      "id": 7,
+      "question": "Which service provides cost optimization recommendations?",
+      "options": [
+        "AWS CloudTrail",
+        "AWS Trusted Advisor",
+        "Amazon CloudWatch",
+        "AWS Config"
+      ],
+      "correct": 1,
+      "explanation": "AWS Trusted Advisor provides real-time guidance including cost optimization recommendations to help reduce costs."
+    },
+    {
+      "id": 8,
+      "question": "What is the AWS Pricing Calculator?",
+      "options": [
+        "A tool to estimate AWS costs for your use case",
+        "A payment processing tool",
+        "A monitoring service",
+        "A billing report"
+      ],
+      "correct": 0,
+      "explanation": "AWS Pricing Calculator helps you estimate costs for AWS services based on your expected usage patterns."
+    },
+    {
+      "id": 9,
+      "question": "What are AWS Organizations volume discounts?",
+      "options": [
+        "Discounts for individuals",
+        "Consolidated billing that can result in volume discounts across accounts",
+        "Discounts for small businesses only",
+        "No volume discounts available"
+      ],
+      "correct": 1,
+      "explanation": "AWS Organizations allows consolidated billing, pooling usage across accounts to reach volume discount tiers faster."
+    },
+    {
+      "id": 10,
+      "question": "What is AWS Cost and Usage Report?",
+      "options": [
+        "A summary email",
+        "The most comprehensive set of cost and usage data available",
+        "A monthly invoice",
+        "A cost prediction tool"
+      ],
+      "correct": 1,
+      "explanation": "AWS Cost and Usage Report provides the most comprehensive cost and usage data, including detailed line items and custom tags."
+    },
+    {
+      "id": 11,
+      "question": "What is included in the AWS Free Tier for EC2?",
+      "options": [
+        "Unlimited instances",
+        "750 hours per month of t2.micro or t3.micro instances for 12 months",
+        "One year of any instance type",
+        "EC2 is not included in Free Tier"
+      ],
+      "correct": 1,
+      "explanation": "AWS Free Tier includes 750 hours per month of Linux or Windows t2.micro (or t3.micro in some regions) instances for 12 months."
+    },
+    {
+      "id": 12,
+      "question": "How does AWS charge for S3?",
+      "options": [
+        "Flat monthly fee",
+        "Based on storage used, requests made, and data transfer",
+        "Only based on storage used",
+        "S3 is always free"
+      ],
+      "correct": 1,
+      "explanation": "S3 charges based on: storage amount (GB-month), number of requests (PUT, GET), and data transfer out of S3."
+    },
+    {
+      "id": 13,
+      "question": "Which support plan provides a Technical Account Manager (TAM)?",
+      "options": [
+        "Basic",
+        "Developer",
+        "Business",
+        "Enterprise"
+      ],
+      "correct": 3,
+      "explanation": "The Enterprise support plan includes a dedicated Technical Account Manager (TAM) who provides proactive guidance."
+    },
+    {
+      "id": 14,
+      "question": "What Reserved Instance term options are available?",
+      "options": [
+        "1 month or 6 months",
+        "1 year or 3 years",
+        "2 years or 5 years",
+        "Only annual contracts"
+      ],
+      "correct": 1,
+      "explanation": "Reserved Instances can be purchased for 1-year or 3-year terms, with 3-year terms providing larger discounts."
+    },
+    {
+      "id": 15,
+      "question": "Which tool helps you create cost estimates before deploying resources?",
+      "options": [
+        "AWS Cost Explorer",
+        "AWS Budgets",
+        "AWS Pricing Calculator",
+        "AWS Cost and Usage Report"
+      ],
+      "correct": 2,
+      "explanation": "AWS Pricing Calculator helps you estimate costs for your AWS use case before you deploy resources."
+    },
+    {
+      "id": 16,
+      "question": "What is a benefit of AWS consolidated billing?",
+      "options": [
+        "Separate invoices for each account",
+        "Combined usage across accounts for potential volume discounts",
+        "Automatic cost reduction",
+        "Free AWS support"
+      ],
+      "correct": 1,
+      "explanation": "Consolidated billing combines usage across all accounts in an organization, helping you reach volume discount tiers faster."
+    },
+    {
+      "id": 17,
+      "question": "Which AWS service is always free (not time-limited)?",
+      "options": [
+        "Amazon EC2 t2.micro",
+        "AWS Lambda (within limits)",
+        "Amazon RDS",
+        "Amazon S3 (all storage)"
+      ],
+      "correct": 1,
+      "explanation": "AWS Lambda includes 1 million free requests per month permanently, not limited to 12 months like some Free Tier offerings."
+    },
+    {
+      "id": 18,
+      "question": "How can you track costs by project or department?",
+      "options": [
+        "Create separate AWS accounts",
+        "Use resource tags",
+        "Use different regions",
+        "It's not possible"
+      ],
+      "correct": 1,
+      "explanation": "Resource tags allow you to categorize and track costs by project, department, environment, or any custom dimension."
+    },
+    {
+      "id": 19,
+      "question": "What is the minimum Enterprise Support plan cost per month?",
+      "options": [
+        "Free",
+        "$100",
+        "$1,000",
+        "$15,000"
+      ],
+      "correct": 3,
+      "explanation": "Enterprise Support starts at $15,000 per month or 3-10% of monthly AWS usage, whichever is higher."
+    },
+    {
+      "id": 20,
+      "question": "Which pricing model requires you to commit to a specific instance type and region?",
+      "options": [
+        "On-Demand",
+        "Spot Instances",
+        "Standard Reserved Instances",
+        "Savings Plans"
+      ],
+      "correct": 2,
+      "explanation": "Standard Reserved Instances require commitment to instance type, region, and platform, offering the highest discount but least flexibility."
+    }
+  ],
+  "documentation": "\n                <h3>Billing & Pricing</h3>\n                \n                <h4>AWS Pricing Philosophy:</h4>\n                <p>AWS pricing is based on three fundamental principles:</p>\n                <ol>\n                    <li><strong>Pay-as-you-go:</strong> Pay only for what you use, no upfront costs</li>\n                    <li><strong>Save when you reserve:</strong> Get discounts by committing to usage</li>\n                    <li><strong>Pay less by using more:</strong> Volume-based discounts</li>\n                </ol>\n\n                <h4>AWS Free Tier:</h4>\n                <p>Three types of free offers:</p>\n                <ul>\n                    <li><strong>12 Months Free:</strong> Starts from sign-up date\n                        <ul>\n                            <li>EC2: 750 hours/month of t2.micro or t3.micro</li>\n                            <li>S3: 5 GB standard storage</li>\n                            <li>RDS: 750 hours/month of db.t2.micro</li>\n                            <li>CloudFront: 50 GB data transfer out</li>\n                        </ul>\n                    </li>\n                    <li><strong>Always Free:</strong> Never expires\n                        <ul>\n                            <li>Lambda: 1 million requests/month</li>\n                            <li>DynamoDB: 25 GB storage</li>\n                            <li>CloudWatch: 10 custom metrics and alarms</li>\n                            <li>SNS: 1 million publishes</li>\n                        </ul>\n                    </li>\n                    <li><strong>Trials:</strong> Short-term free usage\n                        <ul>\n                            <li>SageMaker: 2 months free</li>\n                            <li>Inspector: 90 days free</li>\n                            <li>Lightsail: 1 month free</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>EC2 Pricing Models:</h4>\n                <ul>\n                    <li><strong>On-Demand:</strong> Pay by the hour or second, no commitment</li>\n                    <li><strong>Reserved Instances (RI):</strong> 1 or 3-year commitment, up to 75% discount\n                        <ul>\n                            <li>Standard RI: Largest discount, can't change instance type</li>\n                            <li>Convertible RI: Less discount, can change instance type</li>\n                        </ul>\n                    </li>\n                    <li><strong>Savings Plans:</strong> Flexible pricing, commit to usage ($/hour) for 1 or 3 years</li>\n                    <li><strong>Spot Instances:</strong> Up to 90% discount, can be interrupted</li>\n                    <li><strong>Dedicated Hosts:</strong> Physical server dedicated to you, for compliance</li>\n                    <li><strong>Dedicated Instances:</strong> Instances on hardware dedicated to you</li>\n                </ul>\n\n                <h4>Cost Management Tools:</h4>\n                <ul>\n                    <li><strong>AWS Cost Explorer:</strong>\n                        <ul>\n                            <li>Visualize and analyze costs</li>\n                            <li>View past 12 months and forecast next 12 months</li>\n                            <li>Filter by service, region, tag, etc.</li>\n                            <li>Identify cost trends and anomalies</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Budgets:</strong>\n                        <ul>\n                            <li>Set custom cost and usage budgets</li>\n                            <li>Alerts when exceeding or forecasted to exceed</li>\n                            <li>Track Reserved Instance utilization</li>\n                            <li>Budget types: Cost, Usage, RI Utilization, RI Coverage</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Cost and Usage Report:</strong>\n                        <ul>\n                            <li>Most comprehensive cost data</li>\n                            <li>Hourly, daily, or monthly granularity</li>\n                            <li>Delivered to S3</li>\n                            <li>Can be analyzed with Athena or QuickSight</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Pricing Calculator:</strong>\n                        <ul>\n                            <li>Estimate costs before provisioning</li>\n                            <li>Configure services and view price estimates</li>\n                            <li>Save and share estimates</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>AWS Organizations and Billing:</h4>\n                <ul>\n                    <li><strong>Consolidated Billing:</strong>\n                        <ul>\n                            <li>Single bill for multiple accounts</li>\n                            <li>Combined usage for volume discounts</li>\n                            <li>Free feature of AWS Organizations</li>\n                            <li>Easy tracking of charges</li>\n                        </ul>\n                    </li>\n                    <li><strong>Volume Discounts:</strong>\n                        <ul>\n                            <li>S3: Pay less per GB as usage increases</li>\n                            <li>Data Transfer: Tiered pricing</li>\n                            <li>Pooled usage across accounts</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>AWS Support Plans and Pricing:</h4>\n                <ul>\n                    <li><strong>Basic:</strong> Free\n                        <ul>\n                            <li>Customer Service, documentation, forums</li>\n                            <li>AWS Trusted Advisor (7 core checks)</li>\n                            <li>AWS Personal Health Dashboard</li>\n                        </ul>\n                    </li>\n                    <li><strong>Developer:</strong> $29/month or 3% of monthly usage\n                        <ul>\n                            <li>Business hours email access to Cloud Support Associates</li>\n                            <li>12-24 hour response time</li>\n                        </ul>\n                    </li>\n                    <li><strong>Business:</strong> $100/month or 3-10% of monthly usage\n                        <ul>\n                            <li>24/7 phone, email, and chat support</li>\n                            <li>Full Trusted Advisor checks</li>\n                            <li>1-hour response for urgent issues</li>\n                        </ul>\n                    </li>\n                    <li><strong>Enterprise:</strong> $15,000/month or 3-10% of monthly usage\n                        <ul>\n                            <li>Technical Account Manager (TAM)</li>\n                            <li>Concierge Support Team</li>\n                            <li>15-minute response for critical issues</li>\n                            <li>Infrastructure Event Management</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Cost Optimization Best Practices:</h4>\n                <ol>\n                    <li><strong>Right-sizing:</strong> Use appropriate instance types</li>\n                    <li><strong>Use Reserved Instances/Savings Plans:</strong> For predictable workloads</li>\n                    <li><strong>Use Spot Instances:</strong> For fault-tolerant workloads</li>\n                    <li><strong>Monitor and analyze:</strong> Use Cost Explorer and Budgets</li>\n                    <li><strong>Set budgets and alerts:</strong> Prevent unexpected costs</li>\n                    <li><strong>Delete unused resources:</strong> Stop idle instances, delete unused snapshots</li>\n                    <li><strong>Use Auto Scaling:</strong> Scale resources based on demand</li>\n                    <li><strong>Choose the right storage class:</strong> S3 Glacier for archives</li>\n                    <li><strong>Use AWS Trusted Advisor:</strong> Follow cost optimization recommendations</li>\n                    <li><strong>Leverage tags:</strong> Track costs by project, department, etc.</li>\n                </ol>\n\n                <h4>AWS Pricing Examples:</h4>\n                <ul>\n                    <li><strong>Amazon S3:</strong> Storage (per GB/month) + Requests (per 1,000) + Data Transfer Out</li>\n                    <li><strong>Amazon EC2:</strong> Instance hours + Data Transfer + EBS Storage</li>\n                    <li><strong>Amazon RDS:</strong> Instance hours + Storage + Backup Storage + Data Transfer</li>\n                    <li><strong>Lambda:</strong> Requests (per million) + Duration (per GB-second)</li>\n                    <li><strong>CloudFront:</strong> Data Transfer Out + HTTP/HTTPS Requests</li>\n                </ul>\n\n                <h4>AWS TCO (Total Cost of Ownership) Calculator:</h4>\n                <p>Compare costs of running infrastructure on-premises vs AWS:</p>\n                <ul>\n                    <li>Server costs</li>\n                    <li>Storage costs</li>\n                    <li>Network costs</li>\n                    <li>IT labor costs</li>\n                    <li>Facility costs (power, cooling, space)</li>\n                </ul>\n            ",
+  "followUpQuestions": [
+    {
+      "question": "Which pricing model offers up to 75% discount for a 1 or 3-year commitment?",
+      "options": [
+        "On-Demand",
+        "Reserved Instances",
+        "Spot Instances",
+        "Dedicated Hosts"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What tool helps you set cost and usage budgets with alerts?",
+      "options": [
+        "AWS Cost Explorer",
+        "AWS Budgets",
+        "AWS CloudWatch",
+        "AWS CloudTrail"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How many free hours of Lambda requests are included in the Always Free tier?",
+      "options": [
+        "100,000",
+        "500,000",
+        "1 million",
+        "Unlimited"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the AWS support plan that provides 24/7 phone support?",
+      "options": [
+        "Basic",
+        "Developer",
+        "Business",
+        "Free"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which feature of AWS Organizations helps achieve volume discounts?",
+      "options": [
+        "Service Control Policies",
+        "Consolidated Billing",
+        "Account creation",
+        "Organizational Units"
+      ],
+      "correct": 1
+    }
+  ]
+}

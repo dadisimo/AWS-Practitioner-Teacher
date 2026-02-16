@@ -1,0 +1,301 @@
+{
+  "id": "management-governance",
+  "title": "Management & Governance",
+  "icon": "⚙️",
+  "description": "Learn about AWS management tools, monitoring, and operational best practices",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is AWS CloudFormation?",
+      "options": [
+        "A monitoring service",
+        "Infrastructure as Code service for provisioning resources using templates",
+        "A database service",
+        "A security service"
+      ],
+      "correct": 1,
+      "explanation": "AWS CloudFormation allows you to model and provision AWS resources using templates (Infrastructure as Code)."
+    },
+    {
+      "id": 2,
+      "question": "What is Amazon CloudWatch?",
+      "options": [
+        "A security service",
+        "A monitoring and observability service for AWS resources and applications",
+        "A storage service",
+        "A database service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon CloudWatch monitors AWS resources and applications, collecting and tracking metrics, logs, and events."
+    },
+    {
+      "id": 3,
+      "question": "What does AWS Systems Manager provide?",
+      "options": [
+        "Only monitoring capabilities",
+        "Operational insights and management capabilities for AWS resources",
+        "Only backup services",
+        "Only security features"
+      ],
+      "correct": 1,
+      "explanation": "AWS Systems Manager provides operational data, automates tasks, and helps manage EC2 instances and on-premises servers."
+    },
+    {
+      "id": 4,
+      "question": "What is AWS Config?",
+      "options": [
+        "A compute service",
+        "A service that tracks resource configurations and changes over time",
+        "A storage service",
+        "A networking service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Config continuously monitors and records AWS resource configurations and allows you to assess compliance."
+    },
+    {
+      "id": 5,
+      "question": "What is AWS CloudTrail used for?",
+      "options": [
+        "Monitoring application performance",
+        "Logging and monitoring API calls and account activity",
+        "Managing databases",
+        "Storing files"
+      ],
+      "correct": 1,
+      "explanation": "AWS CloudTrail logs API calls and account activity, providing audit trails for governance, compliance, and operational auditing."
+    },
+    {
+      "id": 6,
+      "question": "What is AWS Trusted Advisor?",
+      "options": [
+        "A database optimization tool",
+        "A service providing real-time guidance on AWS best practices",
+        "A code deployment tool",
+        "A storage service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Trusted Advisor provides real-time guidance to help you provision resources following AWS best practices."
+    },
+    {
+      "id": 7,
+      "question": "What are the five categories of Trusted Advisor checks?",
+      "options": [
+        "Security, Storage, Database, Network, Compute",
+        "Cost Optimization, Performance, Security, Fault Tolerance, Service Limits",
+        "Monitoring, Logging, Backup, Recovery, Compliance",
+        "Identity, Access, Network, Application, Data"
+      ],
+      "correct": 1,
+      "explanation": "Trusted Advisor checks five categories: Cost Optimization, Performance, Security, Fault Tolerance, and Service Limits."
+    },
+    {
+      "id": 8,
+      "question": "What is AWS Organizations used for?",
+      "options": [
+        "Monitoring resources",
+        "Centrally managing and governing multiple AWS accounts",
+        "Deploying applications",
+        "Storing data"
+      ],
+      "correct": 1,
+      "explanation": "AWS Organizations helps you centrally manage and govern your environment as you scale AWS resources."
+    },
+    {
+      "id": 9,
+      "question": "What is AWS Service Catalog?",
+      "options": [
+        "A list of all AWS services",
+        "A service to create and manage catalogs of approved IT services",
+        "A pricing tool",
+        "A monitoring service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Service Catalog allows organizations to create and manage catalogs of IT services approved for use on AWS."
+    },
+    {
+      "id": 10,
+      "question": "What is AWS Personal Health Dashboard?",
+      "options": [
+        "A fitness tracking app",
+        "A dashboard providing alerts and guidance when AWS events might affect your resources",
+        "A cost monitoring tool",
+        "A security tool"
+      ],
+      "correct": 1,
+      "explanation": "AWS Personal Health Dashboard provides alerts and remediation guidance when AWS events might impact your specific resources."
+    },
+    {
+      "id": 11,
+      "question": "What is AWS Control Tower?",
+      "options": [
+        "A monitoring tower",
+        "A service to set up and govern a secure, multi-account AWS environment",
+        "A networking service",
+        "A storage service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Control Tower provides the easiest way to set up and govern a secure, multi-account AWS environment based on best practices."
+    },
+    {
+      "id": 12,
+      "question": "What is Amazon EventBridge?",
+      "options": [
+        "A database service",
+        "A serverless event bus for connecting applications using events",
+        "A storage service",
+        "A compute service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon EventBridge is a serverless event bus that makes it easy to connect applications using data from your own apps, SaaS, and AWS services."
+    },
+    {
+      "id": 13,
+      "question": "What format does AWS CloudFormation use for templates?",
+      "options": [
+        "Only XML",
+        "Only Python",
+        "JSON or YAML",
+        "Only CSV"
+      ],
+      "correct": 2,
+      "explanation": "CloudFormation templates can be written in JSON or YAML format to define your AWS infrastructure as code."
+    },
+    {
+      "id": 14,
+      "question": "Which service helps you centrally manage multiple AWS accounts?",
+      "options": [
+        "AWS CloudTrail",
+        "AWS Organizations",
+        "Amazon CloudWatch",
+        "AWS Lambda"
+      ],
+      "correct": 1,
+      "explanation": "AWS Organizations lets you centrally govern your environment as you grow and scale your AWS resources across multiple accounts."
+    },
+    {
+      "id": 15,
+      "question": "What does Amazon CloudWatch Logs do?",
+      "options": [
+        "Only monitors EC2 instances",
+        "Collects and stores log files from AWS services and applications",
+        "Only tracks billing",
+        "Only monitors databases"
+      ],
+      "correct": 1,
+      "explanation": "CloudWatch Logs enables you to centralize logs from all your systems, applications, and AWS services in a single service."
+    },
+    {
+      "id": 16,
+      "question": "What is AWS Service Catalog used for?",
+      "options": [
+        "Listing all AWS services",
+        "Creating and managing catalogs of approved IT services",
+        "Monitoring resources",
+        "Backing up data"
+      ],
+      "correct": 1,
+      "explanation": "AWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS."
+    },
+    {
+      "id": 17,
+      "question": "Which tool provides best practice recommendations for cost optimization, security, and performance?",
+      "options": [
+        "AWS Config",
+        "AWS CloudTrail",
+        "AWS Trusted Advisor",
+        "Amazon Inspector"
+      ],
+      "correct": 2,
+      "explanation": "AWS Trusted Advisor checks your AWS environment and provides recommendations across five categories including cost, security, and performance."
+    },
+    {
+      "id": 18,
+      "question": "What does AWS Systems Manager Session Manager allow you to do?",
+      "options": [
+        "Only monitor instances",
+        "Securely connect to EC2 instances without SSH keys or bastion hosts",
+        "Only create backups",
+        "Only manage billing"
+      ],
+      "correct": 1,
+      "explanation": "Session Manager provides secure and auditable instance management without needing to open inbound ports, maintain bastion hosts, or manage SSH keys."
+    },
+    {
+      "id": 19,
+      "question": "Which service enables you to set up and enforce guardrails for your multi-account environment?",
+      "options": [
+        "AWS CloudFormation",
+        "AWS Control Tower",
+        "AWS Lambda",
+        "Amazon S3"
+      ],
+      "correct": 1,
+      "explanation": "AWS Control Tower uses guardrails (preventive and detective) to enforce policies and detect policy violations in your multi-account environment."
+    },
+    {
+      "id": 20,
+      "question": "What can you use to track configuration changes to AWS resources over time?",
+      "options": [
+        "AWS Cost Explorer",
+        "AWS Config",
+        "AWS Pricing Calculator",
+        "Amazon S3"
+      ],
+      "correct": 1,
+      "explanation": "AWS Config continuously tracks configuration changes, allowing you to see what changed, who changed it, and when it was changed."
+    }
+  ],
+  "documentation": "\n                <h3>Management & Governance</h3>\n                \n                <h4>Infrastructure as Code:</h4>\n                <ul>\n                    <li><strong>AWS CloudFormation:</strong>\n                        <ul>\n                            <li>Define infrastructure using templates (JSON or YAML)</li>\n                            <li>Version control your infrastructure</li>\n                            <li>Automate resource provisioning</li>\n                            <li>Create stacks from templates</li>\n                            <li>Update and delete stacks as a single unit</li>\n                            <li>No additional charge (pay for resources created)</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS CDK (Cloud Development Kit):</strong>\n                        <ul>\n                            <li>Define infrastructure using programming languages</li>\n                            <li>Supports TypeScript, Python, Java, C#</li>\n                            <li>Synthesizes to CloudFormation templates</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Monitoring and Observability:</h4>\n                <ul>\n                    <li><strong>Amazon CloudWatch:</strong>\n                        <ul>\n                            <li><strong>Metrics:</strong> Monitor resource performance (CPU, disk, network)</li>\n                            <li><strong>Alarms:</strong> Automatically respond to changes (scale, notifications)</li>\n                            <li><strong>Logs:</strong> Centralized log storage and analysis</li>\n                            <li><strong>Events:</strong> Respond to state changes (now EventBridge)</li>\n                            <li><strong>Dashboards:</strong> Visualize metrics and logs</li>\n                            <li><strong>Insights:</strong> Analyze and visualize log data</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS CloudTrail:</strong>\n                        <ul>\n                            <li>Records API calls and account activity</li>\n                            <li>Who, what, when, where for AWS API calls</li>\n                            <li>Stores logs in S3</li>\n                            <li>Enables security analysis and compliance auditing</li>\n                            <li>Can send to CloudWatch Logs</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS X-Ray:</strong>\n                        <ul>\n                            <li>Analyzes and debugs distributed applications</li>\n                            <li>Traces requests through your application</li>\n                            <li>Identifies performance bottlenecks</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Configuration and Compliance:</h4>\n                <ul>\n                    <li><strong>AWS Config:</strong>\n                        <ul>\n                            <li>Tracks resource configurations over time</li>\n                            <li>Records configuration changes</li>\n                            <li>Evaluates compliance with Config Rules</li>\n                            <li>View configuration history</li>\n                            <li>Send notifications when resources are non-compliant</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Systems Manager:</strong>\n                        <ul>\n                            <li><strong>Session Manager:</strong> Secure shell access without SSH keys</li>\n                            <li><strong>Parameter Store:</strong> Store configuration data and secrets</li>\n                            <li><strong>Patch Manager:</strong> Automate patching</li>\n                            <li><strong>Run Command:</strong> Execute commands remotely</li>\n                            <li><strong>State Manager:</strong> Maintain consistent configuration</li>\n                            <li><strong>Inventory:</strong> Collect metadata from instances</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Best Practice Guidance:</h4>\n                <ul>\n                    <li><strong>AWS Trusted Advisor:</strong>\n                        <ul>\n                            <li><strong>Cost Optimization:</strong> Unused resources, idle instances</li>\n                            <li><strong>Performance:</strong> High utilization, throughput</li>\n                            <li><strong>Security:</strong> Security groups, IAM use, MFA</li>\n                            <li><strong>Fault Tolerance:</strong> Backups, multi-AZ, snapshots</li>\n                            <li><strong>Service Limits:</strong> Usage approaching limits</li>\n                            <li>Basic support: 7 core checks</li>\n                            <li>Business/Enterprise support: All checks</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Well-Architected Tool:</strong>\n                        <ul>\n                            <li>Review workloads against best practices</li>\n                            <li>Based on Well-Architected Framework</li>\n                            <li>Free to use</li>\n                            <li>Generates improvement plan</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Multi-Account Management:</h4>\n                <ul>\n                    <li><strong>AWS Organizations:</strong>\n                        <ul>\n                            <li>Centrally manage multiple AWS accounts</li>\n                            <li>Consolidated billing</li>\n                            <li>Hierarchical account structure (OUs)</li>\n                            <li><strong>Service Control Policies (SCPs):</strong> Central access control</li>\n                            <li>Automate account creation</li>\n                            <li>Free service</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Control Tower:</strong>\n                        <ul>\n                            <li>Set up multi-account environment with best practices</li>\n                            <li>Built on AWS Organizations</li>\n                            <li>Guardrails for governance</li>\n                            <li>Account Factory for provisioning</li>\n                            <li>Dashboard for visibility</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Service Management:</h4>\n                <ul>\n                    <li><strong>AWS Service Catalog:</strong>\n                        <ul>\n                            <li>Create and manage approved IT service catalogs</li>\n                            <li>Centrally manage commonly deployed services</li>\n                            <li>Enforce standards and compliance</li>\n                            <li>Users can self-service provision</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS License Manager:</strong>\n                        <ul>\n                            <li>Manage licenses from vendors (Microsoft, Oracle, SAP)</li>\n                            <li>Set licensing rules</li>\n                            <li>Track license usage</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Automation and Operations:</h4>\n                <ul>\n                    <li><strong>AWS OpsWorks:</strong>\n                        <ul>\n                            <li>Configuration management using Chef or Puppet</li>\n                            <li>Automate server configuration</li>\n                            <li>Deploy applications</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon EventBridge:</strong>\n                        <ul>\n                            <li>Serverless event bus</li>\n                            <li>Connect applications using events</li>\n                            <li>Event patterns and scheduled events</li>\n                            <li>Route events to Lambda, SNS, SQS, etc.</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Health and Support:</h4>\n                <ul>\n                    <li><strong>AWS Personal Health Dashboard:</strong>\n                        <ul>\n                            <li>Personalized view of AWS service health</li>\n                            <li>Alerts when AWS events affect your resources</li>\n                            <li>Proactive notifications</li>\n                            <li>Remediation guidance</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Service Health Dashboard:</strong>\n                        <ul>\n                            <li>General status of AWS services</li>\n                            <li>Public view of service availability</li>\n                            <li>Historical information</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Tags and Resource Groups:</h4>\n                <ul>\n                    <li><strong>Tags:</strong>\n                        <ul>\n                            <li>Key-value pairs for organizing resources</li>\n                            <li>Track costs by project, department, environment</li>\n                            <li>Enforce tagging policies</li>\n                            <li>Automate operations based on tags</li>\n                        </ul>\n                    </li>\n                    <li><strong>Resource Groups:</strong>\n                        <ul>\n                            <li>Organize resources by tags</li>\n                            <li>Manage and automate tasks on multiple resources</li>\n                            <li>View and manage grouped resources</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Deployment and Change Management:</h4>\n                <ul>\n                    <li><strong>AWS CodePipeline:</strong> CI/CD service</li>\n                    <li><strong>AWS CodeDeploy:</strong> Automated deployments</li>\n                    <li><strong>AWS CodeBuild:</strong> Build and test code</li>\n                    <li><strong>AWS CodeCommit:</strong> Git repositories</li>\n                </ul>\n\n                <h4>Management Best Practices:</h4>\n                <ol>\n                    <li>Use Infrastructure as Code for consistency</li>\n                    <li>Enable comprehensive monitoring and logging</li>\n                    <li>Implement automation to reduce manual work</li>\n                    <li>Use tags consistently for organization</li>\n                    <li>Set up CloudTrail for audit trails</li>\n                    <li>Regular reviews with Trusted Advisor</li>\n                    <li>Use AWS Organizations for multi-account strategy</li>\n                    <li>Implement alerts for critical events</li>\n                </ol>\n            ",
+  "followUpQuestions": [
+    {
+      "question": "Which service allows you to define infrastructure using templates?",
+      "options": [
+        "AWS Lambda",
+        "AWS CloudFormation",
+        "Amazon S3",
+        "Amazon RDS"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the five categories of AWS Trusted Advisor checks?",
+      "options": [
+        "Security, Compliance, Monitoring, Logging, Backup",
+        "Cost Optimization, Performance, Security, Fault Tolerance, Service Limits",
+        "Compute, Storage, Database, Network, Application",
+        "Identity, Access, Data, Infrastructure, Applications"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which service logs API calls and account activity?",
+      "options": [
+        "Amazon CloudWatch",
+        "AWS CloudTrail",
+        "AWS Config",
+        "AWS X-Ray"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does AWS Organizations provide?",
+      "options": [
+        "Single account management",
+        "Centralized multi-account management",
+        "Monitoring only",
+        "Storage services"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which service helps set up a multi-account environment with best practices?",
+      "options": [
+        "AWS Organizations",
+        "AWS Control Tower",
+        "AWS CloudFormation",
+        "AWS Config"
+      ],
+      "correct": 1
+    }
+  ]
+}

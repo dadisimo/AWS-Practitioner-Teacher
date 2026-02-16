@@ -1,0 +1,301 @@
+{
+  "id": "security-compliance",
+  "title": "Security & Compliance",
+  "icon": "🔒",
+  "description": "Master AWS security services, IAM, and compliance frameworks",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is AWS Identity and Access Management (IAM)?",
+      "options": [
+        "A database service",
+        "A service that enables you to manage access to AWS services and resources securely",
+        "A monitoring service",
+        "A storage service"
+      ],
+      "correct": 1,
+      "explanation": "IAM enables you to manage access to AWS services and resources securely by creating users, groups, roles, and policies."
+    },
+    {
+      "id": 2,
+      "question": "What is the AWS principle of granting least privilege?",
+      "options": [
+        "Give users maximum permissions",
+        "Give users only the permissions they need to perform their job",
+        "Give everyone admin access",
+        "Give no one any permissions"
+      ],
+      "correct": 1,
+      "explanation": "Least privilege means granting only the permissions required to perform a task, minimizing security risks."
+    },
+    {
+      "id": 3,
+      "question": "What is an IAM Role?",
+      "options": [
+        "A permanent user account",
+        "An identity with permissions that can be assumed by entities that need them",
+        "A type of database",
+        "A storage bucket"
+      ],
+      "correct": 1,
+      "explanation": "An IAM role is an identity with specific permissions that can be temporarily assumed by users, applications, or services."
+    },
+    {
+      "id": 4,
+      "question": "What is AWS Multi-Factor Authentication (MFA)?",
+      "options": [
+        "A way to create multiple users",
+        "An extra layer of protection requiring users to present two or more credentials",
+        "A pricing model",
+        "A region selection feature"
+      ],
+      "correct": 1,
+      "explanation": "MFA adds an extra layer of security by requiring users to provide two or more verification factors: something they know (password) and something they have (device)."
+    },
+    {
+      "id": 5,
+      "question": "Which service helps you monitor and log AWS account activity?",
+      "options": [
+        "Amazon S3",
+        "AWS CloudTrail",
+        "Amazon EC2",
+        "AWS Lambda"
+      ],
+      "correct": 1,
+      "explanation": "AWS CloudTrail logs and monitors API calls and account activity, providing audit trails for governance, compliance, and operational auditing."
+    },
+    {
+      "id": 6,
+      "question": "What is AWS Shield?",
+      "options": [
+        "A VPN service",
+        "A managed DDoS protection service",
+        "A firewall",
+        "An antivirus service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Shield is a managed DDoS protection service that safeguards applications running on AWS."
+    },
+    {
+      "id": 7,
+      "question": "What does AWS WAF (Web Application Firewall) protect against?",
+      "options": [
+        "Physical theft",
+        "Common web exploits that could affect application availability",
+        "Hard drive failures",
+        "Network outages"
+      ],
+      "correct": 1,
+      "explanation": "AWS WAF helps protect web applications from common web exploits like SQL injection and cross-site scripting."
+    },
+    {
+      "id": 8,
+      "question": "What is Amazon GuardDuty?",
+      "options": [
+        "A storage service",
+        "A threat detection service that monitors for malicious activity",
+        "A database service",
+        "A compute service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon GuardDuty is an intelligent threat detection service that continuously monitors for malicious activity and unauthorized behavior."
+    },
+    {
+      "id": 9,
+      "question": "What is AWS Artifact?",
+      "options": [
+        "A deployment tool",
+        "A service providing on-demand access to AWS compliance reports",
+        "A storage service",
+        "A monitoring tool"
+      ],
+      "correct": 1,
+      "explanation": "AWS Artifact provides on-demand access to AWS security and compliance documents (compliance reports and agreements)."
+    },
+    {
+      "id": 10,
+      "question": "Which service provides encryption for data at rest in S3?",
+      "options": [
+        "AWS IAM",
+        "AWS KMS (Key Management Service)",
+        "AWS CloudTrail",
+        "AWS Config"
+      ],
+      "correct": 1,
+      "explanation": "AWS KMS makes it easy to create and manage cryptographic keys for encrypting data, including S3 objects."
+    },
+    {
+      "id": 11,
+      "question": "What is AWS Security Hub?",
+      "options": [
+        "A physical security service",
+        "A centralized security and compliance service that aggregates security findings",
+        "A VPN service",
+        "A firewall service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Security Hub provides a comprehensive view of security alerts and compliance status across AWS accounts."
+    },
+    {
+      "id": 12,
+      "question": "What is the root user in an AWS account?",
+      "options": [
+        "A regular user account",
+        "The account owner with complete access to all AWS resources",
+        "A temporary user",
+        "A service account"
+      ],
+      "correct": 1,
+      "explanation": "The root user has complete access to all AWS resources and should be protected with MFA and used sparingly."
+    },
+    {
+      "id": 13,
+      "question": "Which IAM entity should you use to grant permissions to an AWS service?",
+      "options": [
+        "IAM User",
+        "IAM Group",
+        "IAM Role",
+        "IAM Password Policy"
+      ],
+      "correct": 2,
+      "explanation": "IAM Roles are used to grant permissions to AWS services, applications, or users from another account without sharing long-term credentials."
+    },
+    {
+      "id": 14,
+      "question": "What does AWS CloudTrail primarily record?",
+      "options": [
+        "Application logs",
+        "API calls and account activity",
+        "Performance metrics",
+        "Database queries"
+      ],
+      "correct": 1,
+      "explanation": "AWS CloudTrail records API calls and account activity, providing a history of AWS resource changes and user actions."
+    },
+    {
+      "id": 15,
+      "question": "Which security service provides DDoS protection?",
+      "options": [
+        "AWS WAF",
+        "AWS Shield",
+        "Amazon Inspector",
+        "AWS KMS"
+      ],
+      "correct": 1,
+      "explanation": "AWS Shield is a managed DDoS protection service. AWS Shield Standard is free, while Shield Advanced provides enhanced protection."
+    },
+    {
+      "id": 16,
+      "question": "What is the purpose of IAM policies?",
+      "options": [
+        "To monitor AWS resources",
+        "To define permissions - what actions are allowed or denied",
+        "To encrypt data",
+        "To create virtual networks"
+      ],
+      "correct": 1,
+      "explanation": "IAM policies are JSON documents that define permissions by specifying which actions are allowed or denied on which resources."
+    },
+    {
+      "id": 17,
+      "question": "Security Groups act as a virtual firewall at which level?",
+      "options": [
+        "Region level",
+        "VPC level",
+        "Instance level",
+        "Account level"
+      ],
+      "correct": 2,
+      "explanation": "Security Groups act as a virtual firewall at the instance level, controlling inbound and outbound traffic. They are stateful."
+    },
+    {
+      "id": 18,
+      "question": "What compliance program is specifically for healthcare data?",
+      "options": [
+        "PCI DSS",
+        "HIPAA",
+        "SOC 2",
+        "GDPR"
+      ],
+      "correct": 1,
+      "explanation": "HIPAA (Health Insurance Portability and Accountability Act) is the compliance program for protecting patient health information."
+    },
+    {
+      "id": 19,
+      "question": "Which service helps you assess, audit, and evaluate configurations of AWS resources?",
+      "options": [
+        "AWS CloudTrail",
+        "AWS Config",
+        "Amazon CloudWatch",
+        "AWS X-Ray"
+      ],
+      "correct": 1,
+      "explanation": "AWS Config continuously monitors and records AWS resource configurations and allows you to evaluate them against desired configurations."
+    },
+    {
+      "id": 20,
+      "question": "What should you enable on your AWS root account as a security best practice?",
+      "options": [
+        "Password sharing",
+        "Multi-Factor Authentication (MFA)",
+        "Public access",
+        "Anonymous login"
+      ],
+      "correct": 1,
+      "explanation": "Enabling MFA on the root account adds an essential layer of security and is a critical security best practice."
+    }
+  ],
+  "documentation": "\n                <h3>Security & Compliance</h3>\n                \n                <h4>AWS Identity and Access Management (IAM):</h4>\n                <p>IAM enables you to manage access to AWS services and resources securely. You can create and manage AWS users and groups and use permissions to allow and deny their access.</p>\n\n                <h4>IAM Components:</h4>\n                <ul>\n                    <li><strong>Users:</strong> Individual identities with unique credentials</li>\n                    <li><strong>Groups:</strong> Collections of users with shared permissions</li>\n                    <li><strong>Roles:</strong> Identities with permissions that can be assumed temporarily</li>\n                    <li><strong>Policies:</strong> JSON documents defining permissions (what actions on what resources)</li>\n                </ul>\n\n                <h4>IAM Best Practices:</h4>\n                <ol>\n                    <li><strong>Lock root account:</strong> Enable MFA and don't use for daily tasks</li>\n                    <li><strong>Create individual IAM users:</strong> Don't share credentials</li>\n                    <li><strong>Use groups:</strong> Assign permissions to groups, not individual users</li>\n                    <li><strong>Grant least privilege:</strong> Give minimum permissions needed</li>\n                    <li><strong>Enable MFA:</strong> Add extra security layer</li>\n                    <li><strong>Use roles for applications:</strong> Instead of embedding credentials</li>\n                    <li><strong>Rotate credentials regularly:</strong> Change passwords and access keys</li>\n                    <li><strong>Monitor activity:</strong> Use CloudTrail to track IAM actions</li>\n                </ol>\n\n                <h4>Multi-Factor Authentication (MFA):</h4>\n                <p>MFA requires two or more authentication factors:</p>\n                <ul>\n                    <li><strong>Something you know:</strong> Password</li>\n                    <li><strong>Something you have:</strong> Physical device, mobile app, security key</li>\n                    <li><strong>Something you are:</strong> Biometrics (fingerprint, face recognition)</li>\n                </ul>\n\n                <h4>Security Services:</h4>\n                <ul>\n                    <li><strong>AWS CloudTrail:</strong> Logs API calls and account activity for auditing</li>\n                    <li><strong>Amazon CloudWatch:</strong> Monitors resources and applications</li>\n                    <li><strong>AWS Config:</strong> Tracks resource configurations and changes</li>\n                    <li><strong>AWS Trusted Advisor:</strong> Provides best practice recommendations</li>\n                    <li><strong>Amazon Inspector:</strong> Automated security assessment service</li>\n                    <li><strong>Amazon GuardDuty:</strong> Intelligent threat detection</li>\n                    <li><strong>AWS Security Hub:</strong> Centralized security and compliance view</li>\n                </ul>\n\n                <h4>Network Security:</h4>\n                <ul>\n                    <li><strong>Security Groups:</strong> Virtual firewalls for EC2 instances (stateful)</li>\n                    <li><strong>Network ACLs:</strong> Firewall for subnets (stateless)</li>\n                    <li><strong>AWS WAF:</strong> Web Application Firewall protects against web exploits</li>\n                    <li><strong>AWS Shield:</strong> DDoS protection (Standard is free, Advanced costs extra)</li>\n                    <li><strong>AWS Firewall Manager:</strong> Centrally manage firewall rules</li>\n                </ul>\n\n                <h4>Data Protection:</h4>\n                <ul>\n                    <li><strong>Encryption at rest:</strong> Protect stored data (AWS KMS, S3 encryption)</li>\n                    <li><strong>Encryption in transit:</strong> Protect data moving between systems (SSL/TLS, VPN)</li>\n                    <li><strong>AWS KMS:</strong> Create and manage encryption keys</li>\n                    <li><strong>CloudHSM:</strong> Hardware security module for key storage</li>\n                    <li><strong>AWS Certificate Manager:</strong> Provision and manage SSL/TLS certificates</li>\n                </ul>\n\n                <h4>Compliance Programs:</h4>\n                <p>AWS complies with many certifications and standards:</p>\n                <ul>\n                    <li><strong>PCI DSS:</strong> Payment Card Industry Data Security Standard</li>\n                    <li><strong>HIPAA:</strong> Health Insurance Portability and Accountability Act</li>\n                    <li><strong>SOC 1, 2, 3:</strong> Service Organization Control reports</li>\n                    <li><strong>ISO 27001:</strong> Information security management</li>\n                    <li><strong>GDPR:</strong> General Data Protection Regulation</li>\n                    <li><strong>FedRAMP:</strong> Federal Risk and Authorization Management Program</li>\n                </ul>\n\n                <h4>AWS Artifact:</h4>\n                <p>Provides on-demand access to AWS compliance reports and agreements:</p>\n                <ul>\n                    <li>Download AWS security and compliance documents</li>\n                    <li>Review and accept agreements (BAA for HIPAA)</li>\n                    <li>No charge for accessing reports</li>\n                </ul>\n\n                <h4>Security Best Practices:</h4>\n                <ol>\n                    <li>Implement defense in depth (multiple security layers)</li>\n                    <li>Enable logging and monitoring</li>\n                    <li>Automate security responses</li>\n                    <li>Protect data at rest and in transit</li>\n                    <li>Prepare for security events (incident response plan)</li>\n                    <li>Use AWS security services and tools</li>\n                    <li>Regular security assessments and audits</li>\n                </ol>\n            ",
+  "followUpQuestions": [
+    {
+      "question": "What are the three components required for MFA?",
+      "options": [
+        "Password, username, email",
+        "Something you know, something you have, something you are",
+        "User, group, role",
+        "Region, zone, subnet"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which service provides on-demand access to AWS compliance reports?",
+      "options": [
+        "AWS Config",
+        "AWS Artifact",
+        "AWS CloudTrail",
+        "AWS Inspector"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the difference between Security Groups and Network ACLs?",
+      "options": [
+        "No difference",
+        "Security Groups are stateful, Network ACLs are stateless",
+        "Security Groups are stateless, Network ACLs are stateful",
+        "Both are the same"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which service helps create and manage encryption keys?",
+      "options": [
+        "AWS IAM",
+        "AWS KMS",
+        "AWS Shield",
+        "AWS WAF"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What should you do with the AWS root account?",
+      "options": [
+        "Use it for daily tasks",
+        "Share it with team members",
+        "Enable MFA and use sparingly",
+        "Delete it"
+      ],
+      "correct": 2
+    }
+  ]
+}

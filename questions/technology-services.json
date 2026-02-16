@@ -1,0 +1,301 @@
+{
+  "id": "technology-services",
+  "title": "Technology & Services",
+  "icon": "💻",
+  "description": "Explore core AWS services including compute, storage, database, and networking",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Amazon EC2?",
+      "options": [
+        "A storage service",
+        "A virtual server in the cloud providing scalable compute capacity",
+        "A database service",
+        "A monitoring service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon EC2 (Elastic Compute Cloud) provides scalable virtual servers in the cloud."
+    },
+    {
+      "id": 2,
+      "question": "What is Amazon S3 used for?",
+      "options": [
+        "Running virtual machines",
+        "Object storage with unlimited scalability",
+        "Managing databases",
+        "Load balancing"
+      ],
+      "correct": 1,
+      "explanation": "Amazon S3 (Simple Storage Service) is an object storage service offering unlimited scalability, durability, and availability."
+    },
+    {
+      "id": 3,
+      "question": "What is AWS Lambda?",
+      "options": [
+        "A database service",
+        "A serverless compute service that runs code in response to events",
+        "A storage service",
+        "A networking service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Lambda lets you run code without provisioning or managing servers. You pay only for compute time consumed."
+    },
+    {
+      "id": 4,
+      "question": "What is Amazon RDS?",
+      "options": [
+        "A file storage service",
+        "A managed relational database service",
+        "A NoSQL database",
+        "A compute service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon RDS (Relational Database Service) makes it easy to set up, operate, and scale relational databases in the cloud."
+    },
+    {
+      "id": 5,
+      "question": "What is Amazon VPC?",
+      "options": [
+        "A monitoring service",
+        "A virtual private cloud enabling you to launch AWS resources in a logically isolated network",
+        "A database service",
+        "A storage service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon VPC (Virtual Private Cloud) lets you provision a logically isolated section of AWS cloud with complete control over networking."
+    },
+    {
+      "id": 6,
+      "question": "What is Amazon CloudFront?",
+      "options": [
+        "A compute service",
+        "A content delivery network (CDN) that delivers content with low latency",
+        "A database service",
+        "A monitoring service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon CloudFront is a fast CDN that securely delivers data, videos, applications, and APIs globally with low latency."
+    },
+    {
+      "id": 7,
+      "question": "What is Amazon DynamoDB?",
+      "options": [
+        "A relational database",
+        "A fully managed NoSQL database service",
+        "A file storage service",
+        "A compute service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon DynamoDB is a fast, flexible NoSQL database service providing single-digit millisecond performance at any scale."
+    },
+    {
+      "id": 8,
+      "question": "What is AWS Elastic Beanstalk?",
+      "options": [
+        "A database service",
+        "A PaaS for deploying and scaling web applications without managing infrastructure",
+        "A storage service",
+        "A monitoring service"
+      ],
+      "correct": 1,
+      "explanation": "AWS Elastic Beanstalk is a platform service that handles deployment, capacity provisioning, load balancing, and auto-scaling."
+    },
+    {
+      "id": 9,
+      "question": "What is Amazon Route 53?",
+      "options": [
+        "A compute service",
+        "A scalable DNS web service",
+        "A storage service",
+        "A database service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon Route 53 is a scalable DNS and domain name registration service that routes users to applications."
+    },
+    {
+      "id": 10,
+      "question": "What is Amazon SNS?",
+      "options": [
+        "A storage service",
+        "A fully managed pub/sub messaging service",
+        "A compute service",
+        "A database service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon SNS (Simple Notification Service) is a pub/sub messaging service for coordinating message delivery to subscribers."
+    },
+    {
+      "id": 11,
+      "question": "What is Amazon ECS?",
+      "options": [
+        "A file storage service",
+        "A container orchestration service for running Docker containers",
+        "A database service",
+        "A monitoring service"
+      ],
+      "correct": 1,
+      "explanation": "Amazon ECS (Elastic Container Service) is a highly scalable container orchestration service for Docker containers."
+    },
+    {
+      "id": 12,
+      "question": "What is AWS Auto Scaling?",
+      "options": [
+        "A service that automatically adjusts capacity to maintain performance",
+        "A database backup service",
+        "A monitoring service only",
+        "A storage service"
+      ],
+      "correct": 0,
+      "explanation": "AWS Auto Scaling monitors applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest cost."
+    },
+    {
+      "id": 13,
+      "question": "Which storage class is best for data that needs to be archived for years?",
+      "options": [
+        "S3 Standard",
+        "S3 Intelligent-Tiering",
+        "S3 Glacier Deep Archive",
+        "S3 One Zone-IA"
+      ],
+      "correct": 2,
+      "explanation": "S3 Glacier Deep Archive is the lowest-cost storage class for long-term archive and digital preservation, with retrieval times of 12 hours."
+    },
+    {
+      "id": 14,
+      "question": "What is Amazon Aurora?",
+      "options": [
+        "A NoSQL database",
+        "A MySQL and PostgreSQL-compatible relational database",
+        "An in-memory cache",
+        "A data warehouse"
+      ],
+      "correct": 1,
+      "explanation": "Amazon Aurora is a MySQL and PostgreSQL-compatible relational database that is up to 5 times faster than MySQL and 3 times faster than PostgreSQL."
+    },
+    {
+      "id": 15,
+      "question": "Which service queues messages between distributed application components?",
+      "options": [
+        "Amazon SQS",
+        "Amazon SNS",
+        "AWS Lambda",
+        "Amazon EC2"
+      ],
+      "correct": 0,
+      "explanation": "Amazon SQS (Simple Queue Service) is a message queuing service that decouples and scales microservices, distributed systems, and serverless applications."
+    },
+    {
+      "id": 16,
+      "question": "What type of database is Amazon DynamoDB?",
+      "options": [
+        "Relational SQL database",
+        "Key-value and document NoSQL database",
+        "Graph database",
+        "Time-series database"
+      ],
+      "correct": 1,
+      "explanation": "DynamoDB is a fully managed NoSQL database that supports both key-value and document data models."
+    },
+    {
+      "id": 17,
+      "question": "Which EC2 pricing option offers up to 90% discount but can be interrupted?",
+      "options": [
+        "On-Demand",
+        "Reserved Instances",
+        "Spot Instances",
+        "Dedicated Hosts"
+      ],
+      "correct": 2,
+      "explanation": "Spot Instances let you use spare EC2 capacity at up to 90% discount, but AWS can reclaim them with a 2-minute warning."
+    },
+    {
+      "id": 18,
+      "question": "What is Amazon EFS used for?",
+      "options": [
+        "Object storage",
+        "Block storage for EC2",
+        "Shared file storage that can be mounted by multiple EC2 instances",
+        "Database storage"
+      ],
+      "correct": 2,
+      "explanation": "Amazon EFS (Elastic File System) provides scalable file storage that can be concurrently accessed by multiple EC2 instances."
+    },
+    {
+      "id": 19,
+      "question": "Which service manages Kubernetes on AWS?",
+      "options": [
+        "Amazon ECS",
+        "Amazon EKS",
+        "AWS Lambda",
+        "AWS Fargate"
+      ],
+      "correct": 1,
+      "explanation": "Amazon EKS (Elastic Kubernetes Service) is a managed Kubernetes service that makes it easy to run Kubernetes on AWS."
+    },
+    {
+      "id": 20,
+      "question": "What is Amazon Redshift used for?",
+      "options": [
+        "Web hosting",
+        "Data warehousing and analytics",
+        "File storage",
+        "Email services"
+      ],
+      "correct": 1,
+      "explanation": "Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze data using SQL and existing BI tools."
+    }
+  ],
+  "documentation": "\n                <h3>Technology & Services</h3>\n                \n                <h4>Compute Services:</h4>\n                <ul>\n                    <li><strong>Amazon EC2:</strong> Virtual servers in the cloud\n                        <ul>\n                            <li>Instance types: General Purpose, Compute Optimized, Memory Optimized, Storage Optimized</li>\n                            <li>Pricing: On-Demand, Reserved, Spot, Dedicated Hosts, Savings Plans</li>\n                            <li>Use cases: Web applications, databases, development environments</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Lambda:</strong> Serverless compute\n                        <ul>\n                            <li>Run code without managing servers</li>\n                            <li>Pay only when code runs (per request and duration)</li>\n                            <li>Automatic scaling</li>\n                            <li>Use cases: APIs, data processing, automation</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Elastic Beanstalk:</strong> PaaS for deploying applications\n                        <ul>\n                            <li>Upload code and Beanstalk handles deployment</li>\n                            <li>Supports Java, .NET, PHP, Node.js, Python, Ruby, Go, Docker</li>\n                            <li>Automatically manages capacity, load balancing, scaling, monitoring</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon ECS/EKS:</strong> Container orchestration\n                        <ul>\n                            <li>ECS: AWS container orchestration service</li>\n                            <li>EKS: Managed Kubernetes service</li>\n                            <li>Run and scale containerized applications</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Storage Services:</h4>\n                <ul>\n                    <li><strong>Amazon S3:</strong> Object storage\n                        <ul>\n                            <li>Store and retrieve any amount of data</li>\n                            <li>99.999999999% (11 nines) durability</li>\n                            <li>Storage classes: Standard, Intelligent-Tiering, Glacier, Glacier Deep Archive</li>\n                            <li>Use cases: Backups, data lakes, websites, archives</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon EBS:</strong> Block storage for EC2\n                        <ul>\n                            <li>Persistent block storage volumes</li>\n                            <li>Types: SSD (gp3, io2) and HDD (st1, sc1)</li>\n                            <li>Snapshots for backups</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon EFS:</strong> Elastic File System\n                        <ul>\n                            <li>Shared file storage for EC2</li>\n                            <li>Automatically grows and shrinks</li>\n                            <li>NFSv4 protocol</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Storage Gateway:</strong> Hybrid cloud storage\n                        <ul>\n                            <li>Connects on-premises with cloud storage</li>\n                            <li>File, Volume, and Tape Gateway</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Database Services:</h4>\n                <ul>\n                    <li><strong>Amazon RDS:</strong> Managed relational databases\n                        <ul>\n                            <li>Supports MySQL, PostgreSQL, Oracle, SQL Server, MariaDB</li>\n                            <li>Automated backups, patching, scaling</li>\n                            <li>Multi-AZ for high availability</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon Aurora:</strong> MySQL and PostgreSQL compatible\n                        <ul>\n                            <li>5x faster than MySQL, 3x faster than PostgreSQL</li>\n                            <li>Automatically scales storage up to 128 TB</li>\n                            <li>Up to 15 read replicas</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon DynamoDB:</strong> NoSQL database\n                        <ul>\n                            <li>Key-value and document database</li>\n                            <li>Single-digit millisecond performance</li>\n                            <li>Fully managed, serverless</li>\n                            <li>Auto scaling</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon ElastiCache:</strong> In-memory caching\n                        <ul>\n                            <li>Supports Redis and Memcached</li>\n                            <li>Improves application performance</li>\n                            <li>Reduces database load</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon Redshift:</strong> Data warehouse\n                        <ul>\n                            <li>Analyze data using SQL</li>\n                            <li>Petabyte-scale</li>\n                            <li>Fast query performance</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Networking Services:</h4>\n                <ul>\n                    <li><strong>Amazon VPC:</strong> Virtual Private Cloud\n                        <ul>\n                            <li>Isolated network environment</li>\n                            <li>Subnets, route tables, internet gateways</li>\n                            <li>Security groups and Network ACLs</li>\n                        </ul>\n                    </li>\n                    <li><strong>Elastic Load Balancing:</strong> Distributes traffic\n                        <ul>\n                            <li>Application Load Balancer (Layer 7)</li>\n                            <li>Network Load Balancer (Layer 4)</li>\n                            <li>Gateway Load Balancer</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon CloudFront:</strong> Content Delivery Network\n                        <ul>\n                            <li>Global edge locations</li>\n                            <li>Low latency content delivery</li>\n                            <li>Integrates with S3, EC2, ELB</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon Route 53:</strong> DNS service\n                        <ul>\n                            <li>Domain registration</li>\n                            <li>Health checks and monitoring</li>\n                            <li>Routing policies: Simple, Weighted, Geolocation, Failover</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Direct Connect:</strong> Dedicated network connection\n                        <ul>\n                            <li>Private connectivity between AWS and your data center</li>\n                            <li>Reduces costs and increases bandwidth</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Application Integration:</h4>\n                <ul>\n                    <li><strong>Amazon SQS:</strong> Message queuing service\n                        <ul>\n                            <li>Decouple and scale microservices</li>\n                            <li>Standard and FIFO queues</li>\n                        </ul>\n                    </li>\n                    <li><strong>Amazon SNS:</strong> Pub/sub messaging\n                        <ul>\n                            <li>Send messages to multiple subscribers</li>\n                            <li>Push notifications to mobile devices</li>\n                        </ul>\n                    </li>\n                    <li><strong>AWS Step Functions:</strong> Orchestrate workflows\n                        <ul>\n                            <li>Coordinate components of distributed applications</li>\n                            <li>Visual workflow designer</li>\n                        </ul>\n                    </li>\n                </ul>\n\n                <h4>Additional Key Services:</h4>\n                <ul>\n                    <li><strong>AWS CloudFormation:</strong> Infrastructure as Code</li>\n                    <li><strong>Amazon CloudWatch:</strong> Monitoring and observability</li>\n                    <li><strong>AWS Systems Manager:</strong> Operations management</li>\n                    <li><strong>AWS Trusted Advisor:</strong> Best practice recommendations</li>\n                </ul>\n            ",
+  "followUpQuestions": [
+    {
+      "question": "Which service would you use for serverless compute?",
+      "options": [
+        "Amazon EC2",
+        "AWS Lambda",
+        "Amazon S3",
+        "Amazon RDS"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the durability of Amazon S3?",
+      "options": [
+        "99.9%",
+        "99.99%",
+        "99.999999999%",
+        "100%"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which database service is best for key-value data with millisecond latency?",
+      "options": [
+        "Amazon RDS",
+        "Amazon Redshift",
+        "Amazon DynamoDB",
+        "Amazon Aurora"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does Amazon CloudFront provide?",
+      "options": [
+        "Compute capacity",
+        "Content delivery network",
+        "Database storage",
+        "Virtual network"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which service helps deploy applications without managing infrastructure?",
+      "options": [
+        "Amazon EC2",
+        "AWS Elastic Beanstalk",
+        "Amazon S3",
+        "Amazon VPC"
+      ],
+      "correct": 1
+    }
+  ]
+}

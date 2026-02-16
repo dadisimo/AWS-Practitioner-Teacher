@@ -1,3 +1,8 @@
+// Global data object
+let awsData = {
+    sections: []
+};
+
 // State Management
 let state = {
     currentSection: null,
@@ -12,10 +17,121 @@ let state = {
     needsRemediation: false  // Flag to know if we need to show doc + follow-up
 };
 
+// Validate section format
+function validateSection(section) {
+    if (!section || typeof section !== 'object') return false;
+    
+    const requiredFields = ['id', 'title', 'icon', 'description', 'questions', 'documentation', 'followUpQuestions'];
+    for (const field of requiredFields) {
+        if (!(field in section)) {
+            console.warn(`Section missing required field: ${field}`);
+            return false;
+        }
+    }
+    
+    // Validate questions array
+    if (!Array.isArray(section.questions) || section.questions.length === 0) {
+        console.warn(`Section ${section.id} has invalid questions array`);
+        return false;
+    }
+    
+    // Validate each question has required fields
+    for (const question of section.questions) {
+        if (!question.question || !Array.isArray(question.options) || 
+            typeof question.correct !== 'number' || !question.explanation) {
+            console.warn(`Invalid question in section ${section.id}`);
+            return false;
+        }
+    }
+    
+    // Validate followUpQuestions
+    if (!Array.isArray(section.followUpQuestions)) {
+        console.warn(`Section ${section.id} has invalid followUpQuestions`);
+        return false;
+    }
+    
+    return true;
+}
+
+// Load all JSON files from the questions directory
+async function loadQuestionData() {
+    try {
+        // Load the manifest file that lists all available JSON files
+        const manifestResponse = await fetch('questions/manifest.json');
+        if (!manifestResponse.ok) {
+            throw new Error('Could not load questions/manifest.json. Run: node generate-manifest.js');
+        }
+        const manifest = await manifestResponse.json();
+        const jsonFiles = manifest.files || [];
+        
+        if (jsonFiles.length === 0) {
+            throw new Error('No question files listed in manifest.json');
+        }
+        
+        // Load all JSON files in parallel
+        const loadPromises = jsonFiles.map(async (filename) => {
+            try {
+                const response = await fetch(`questions/${filename}`);
+                if (!response.ok) {
+                    console.warn(`Failed to load ${filename}: ${response.status}`);
+                    return null;
+                }
+                const section = await response.json();
+                
+                // Validate the section format
+                if (validateSection(section)) {
+                    return section;
+                } else {
+                    console.warn(`Invalid section format in ${filename}`);
+                    return null;
+                }
+            } catch (error) {
+                console.warn(`Error loading ${filename}:`, error);
+                return null;
+            }
+        });
+        
+        const sections = await Promise.all(loadPromises);
+        
+        // Filter out null values and add to awsData
+        awsData.sections = sections.filter(section => section !== null);
+        
+        if (awsData.sections.length === 0) {
+            throw new Error('No valid question sections loaded');
+        }
+        
+        console.log(`Loaded ${awsData.sections.length} question sections`);
+        return true;
+    } catch (error) {
+        console.error('Error loading question data:', error);
+        alert('Error loading quiz data. Please refresh the page.');
+        return false;
+    }
+}
+
 // Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
-    loadProgress();
-    renderSections();
+document.addEventListener('DOMContentLoaded', async function() {
+    // Show loading state
+    const welcomeScreen = document.getElementById('welcome-screen');
+    if (welcomeScreen) {
+        welcomeScreen.innerHTML += '<p>Loading quiz data...</p>';
+    }
+    
+    // Load question data from JSON files
+    const loaded = await loadQuestionData();
+    
+    if (loaded) {
+        loadProgress();
+        renderSections();
+        
+        // Remove loading message
+        if (welcomeScreen) {
+            const loadingMsg = welcomeScreen.querySelector('p:last-child');
+            if (loadingMsg && loadingMsg.textContent === 'Loading quiz data...') {
+                loadingMsg.remove();
+            }
+        }
+    }
 });
 
 // Save progress to localStorage
