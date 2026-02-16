@@ -7,7 +7,9 @@ let state = {
     followUpCorrect: 0,
     followUpQuestions: [],
     followUpIndex: 0,
-    completedSections: []
+    completedSections: [],
+    pausedAtQuestion: null,  // Track where we paused the quiz
+    needsRemediation: false  // Flag to know if we need to show doc + follow-up
 };
 
 // Initialize the application
@@ -139,29 +141,36 @@ function selectAnswer(selectedIndex) {
         <p>${question.explanation}</p>
     `;
     
-    // Track wrong answers
-    if (!isCorrect && !state.wrongAnswers.some(w => w.questionIndex === state.currentQuestionIndex)) {
-        state.wrongAnswers.push({
-            questionIndex: state.currentQuestionIndex,
-            question: question
-        });
-    }
-    
-    // Show next button
-    const nextButton = document.createElement('button');
-    nextButton.className = 'btn btn-primary next-btn';
-    nextButton.textContent = state.currentQuestionIndex < section.questions.length - 1 
-        ? 'Next Question' 
-        : 'Complete Quiz';
-    nextButton.onclick = nextQuestion;
-    feedbackDiv.appendChild(nextButton);
-    
-    saveProgress();
-}
-
-// Move to next question
-function nextQuestion() {
-    const section = state.currentSection;
+    if (!isCorrect) {
+        // Track this wrong answer
+        if (!state.wrongAnswers.some(w => w.questionIndex === state.currentQuestionIndex)) {
+            state.wrongAnswers.push({
+                questionIndex: state.currentQuestionIndex,
+                question: question
+            });
+        }
+        
+        // Show button to go to documentation
+        const docButton = document.createElement('button');
+        docButton.className = 'btn btn-primary next-btn';
+        docButton.textContent = 'Study Documentation';
+        docButton.onclick = () => {
+            state.pausedAtQuestion = state.currentQuestionIndex;
+            state.needsRemediation = true;
+            showDocumentation();
+        };
+        feedbackDiv.appendChild(docButton);
+    } else {
+        // Correct answer - show next button
+        const nextButton = document.createElement('button');
+        nextButton.className = 'btn btn-primary next-btn';
+        nextButton.textContent = state.currentQuestionIndex < section.questions.length - 1 
+            ? 'Next Question' 
+            : 'Complete Quiz';
+        nextButton.onclick = nextQuestion;
+        feedbackDiv.appendChild(nextButton);
+    }all correct!
+        completeSection(); section = state.currentSection;
     
     if (state.currentQuestionIndex < section.questions.length - 1) {
         state.currentQuestionIndex++;
@@ -195,6 +204,9 @@ function showDocumentation() {
 function startFollowUpQuestions() {
     const section = state.currentSection;
     
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
     // Shuffle follow-up questions
     state.followUpQuestions = shuffleArray([...section.followUpQuestions]);
     state.followUpIndex = 0;
@@ -254,9 +266,28 @@ function selectFollowUpAnswer(selectedIndex) {
             setTimeout(() => {
                 completeSection();
             }, 1500);
-        } else {
-            // Show next button
-            const nextButton = document.createElement('button');
+        } el// Passed the follow-up quiz
+            if (state.needsRemediation) {
+                // Return to the main quiz at the next question
+                state.needsRemediation = false;
+                feedbackDiv.innerHTML += `<p><strong>Great! Now let's continue with the quiz.</strong></p>`;
+                setTimeout(() => {
+                    // Move to next question in the main quiz
+                    state.currentQuestionIndex = state.pausedAtQuestion + 1;
+                    const section = state.currentSection;
+                    if (state.currentQuestionIndex < section.questions.length) {
+                        showQuiz();
+                    } else {
+                        // Was the last question - complete section
+                        completeSection();
+                    }
+                }, 2000);
+            } else {
+                // This was final completion after all questions
+                setTimeout(() => {
+                    completeSection();
+                }, 1500);
+            }tButton = document.createElement('button');
             nextButton.className = 'btn btn-primary next-btn';
             nextButton.textContent = 'Next Question';
             nextButton.onclick = nextFollowUpQuestion;
