@@ -248,10 +248,6 @@ const awsData = {
                     explanation: 'Fault tolerance means the system can continue to operate properly even when some of its components fail, often through redundancy.'
                 }
             ],
-                    correct: 1,
-                    explanation: 'Loose coupling means designing components with minimal dependencies, so changes or failures in one component don\'t cascade to others.'
-                }
-            ],
             documentation: `
                 <h3>Cloud Concepts & Architecture</h3>
                 
