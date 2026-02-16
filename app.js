@@ -77,6 +77,28 @@ function renderSections() {
     });
 }
 
+// Shuffle question options and update correct answer index
+function shuffleQuestionOptions(question) {
+    // Create array of [option, isCorrect] pairs
+    const optionsWithCorrectFlag = question.options.map((option, index) => ({
+        option: option,
+        isCorrect: index === question.correct
+    }));
+    
+    // Shuffle the options
+    const shuffled = shuffleArray(optionsWithCorrectFlag);
+    
+    // Extract shuffled options and find new correct index
+    const shuffledOptions = shuffled.map(item => item.option);
+    const newCorrectIndex = shuffled.findIndex(item => item.isCorrect);
+    
+    return {
+        ...question,
+        options: shuffledOptions,
+        correct: newCorrectIndex
+    };
+}
+
 // Start a section
 function startSection(sectionId) {
     const section = awsData.sections.find(s => s.id === sectionId);
@@ -85,9 +107,12 @@ function startSection(sectionId) {
     // Create a shuffled copy of questions for this session
     const shuffledQuestions = shuffleArray([...section.questions]);
     
+    // Shuffle options for each question
+    const questionsWithShuffledOptions = shuffledQuestions.map(q => shuffleQuestionOptions(q));
+    
     state.currentSection = {
         ...section,
-        questions: shuffledQuestions
+        questions: questionsWithShuffledOptions
     };
     state.currentQuestionIndex = 0;
     state.wrongAnswers = [];
@@ -210,8 +235,9 @@ function showDocumentation() {
 function startFollowUpQuestions() {
     const section = state.currentSection;
     
-    // Shuffle follow-up questions
-    state.followUpQuestions = shuffleArray([...section.followUpQuestions]);
+    // Shuffle follow-up questions and their options
+    const shuffledQuestions = shuffleArray([...section.followUpQuestions]);
+    state.followUpQuestions = shuffledQuestions.map(q => shuffleQuestionOptions(q));
     state.followUpIndex = 0;
     state.followUpCorrect = 0;
     
@@ -324,7 +350,8 @@ function nextFollowUpQuestion() {
         displayFollowUpQuestion();
     } else {
         // Need more questions - shuffle and restart
-        state.followUpQuestions = shuffleArray([...state.currentSection.followUpQuestions]);
+        const shuffledQuestions = shuffleArray([...state.currentSection.followUpQuestions]);
+        state.followUpQuestions = shuffledQuestions.map(q => shuffleQuestionOptions(q));
         state.followUpIndex = 0;
         displayFollowUpQuestion();
     }
