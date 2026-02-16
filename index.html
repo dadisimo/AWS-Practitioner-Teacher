@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AWS Practitioner Exam Preparation - Interactive Quiz and Learning Platform">
+    <title>AWS Practitioner Teacher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🎓 AWS Practitioner Teacher</h1>
+            <p class="subtitle">Master AWS Cloud Practitioner Certification</p>
+        </header>
+
+        <!-- Progress Tracker -->
+        <div id="progress-container" class="progress-container">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="progress-text" class="progress-text">Progress: 0%</p>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h2>Welcome to Your AWS Learning Journey! 🚀</h2>
+                <p>This interactive platform will help you prepare for the AWS Certified Cloud Practitioner exam.</p>
+                
+                <div class="info-box">
+                    <h3>How It Works:</h3>
+                    <ol>
+                        <li>Complete quizzes for each AWS section (10+ questions per section)</li>
+                        <li>Incorrect answers open detailed documentation</li>
+                        <li>After studying, answer 3 follow-up questions correctly</li>
+                        <li>Master all sections to become exam-ready!</li>
+                    </ol>
+                </div>
+
+                <div class="sections-overview">
+                    <h3>Sections Covered:</h3>
+                    <ul>
+                        <li>☁️ Cloud Concepts & Architecture</li>
+                        <li>🔒 Security & Compliance</li>
+                        <li>💻 Technology & Services</li>
+                        <li>💰 Billing & Pricing</li>
+                        <li>⚙️ Management & Governance</li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary" onclick="startLearning()">Start Learning</button>
+            </div>
+        </div>
+
+        <!-- Section Selection -->
+        <div id="section-screen" class="screen">
+            <h2>Choose Your Section</h2>
+            <div id="sections-container" class="sections-grid"></div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <h2 id="quiz-title"></h2>
+                <p id="question-counter"></p>
+            </div>
+            <div id="question-container" class="question-container"></div>
+        </div>
+
+        <!-- Documentation Screen -->
+        <div id="doc-screen" class="screen">
+            <div class="doc-header">
+                <h2 id="doc-title"></h2>
+            </div>
+            <div id="doc-content" class="doc-content"></div>
+            <button class="btn btn-primary" onclick="startFollowUpQuestions()">I've Finished Reading - Take Follow-up Quiz</button>
+        </div>
+
+        <!-- Follow-up Questions Screen -->
+        <div id="followup-screen" class="screen">
+            <div class="followup-header">
+                <h2>Follow-up Questions</h2>
+                <p class="followup-info">Answer 3 questions correctly to proceed. One wrong answer returns you to documentation.</p>
+                <p id="followup-counter"></p>
+            </div>
+            <div id="followup-container" class="question-container"></div>
+        </div>
+
+        <!-- Completion Screen -->
+        <div id="completion-screen" class="screen">
+            <div class="completion-content">
+                <h2>🎉 Congratulations!</h2>
+                <p id="completion-message"></p>
+                <div id="final-stats" class="stats-box"></div>
+                <div class="completion-actions">
+                    <button class="btn btn-primary" onclick="continueToNextSection()">Continue to Next Section</button>
+                    <button class="btn btn-secondary" onclick="showSectionSelection()">Back to Sections</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Completion Screen -->
+        <div id="final-completion-screen" class="screen">
+            <div class="final-completion-content">
+                <h2>🏆 Exam Ready!</h2>
+                <p>You've completed all sections and are now fully prepared for the AWS Certified Cloud Practitioner exam!</p>
+                <div id="overall-stats" class="stats-box"></div>
+                <div class="certificate">
+                    <h3>Certificate of Completion</h3>
+                    <p>You have successfully completed the AWS Practitioner Teacher program</p>
+                    <p class="date" id="completion-date"></p>
+                </div>
+                <button class="btn btn-primary" onclick="restartCourse()">Restart Course</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
