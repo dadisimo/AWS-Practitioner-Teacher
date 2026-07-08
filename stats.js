@@ -242,10 +242,13 @@ async function updateConnectedUsers(myLocation) {
         const app = getApps().length ? getApps()[0] : initializeApp(FIREBASE_CONFIG);
         const db = getDatabase(app);
 
-        // Persistent anonymous user ID
+        // Persistent anonymous user ID (using cryptographically secure random values)
         let uid = localStorage.getItem('practitioner_uid');
         if (!uid) {
-            uid = 'u_' + Math.random().toString(36).substring(2, 11);
+            uid = typeof crypto !== 'undefined' && crypto.randomUUID
+                ? crypto.randomUUID()
+                : Array.from(crypto.getRandomValues(new Uint8Array(9)))
+                    .map(b => b.toString(16).padStart(2, '0')).join('');
             localStorage.setItem('practitioner_uid', uid);
         }
 
@@ -318,7 +321,19 @@ function showDemoMarkers() {
 function appendDemoBadge() {
     const el = document.getElementById('map-status');
     if (!el) return;
-    el.innerHTML = el.textContent +
-        ' &nbsp;<span class="demo-badge">Demo mode</span>' +
-        ' — <a href="firebase-config.js" target="_blank">configure Firebase</a> for live data';
+    // Build the suffix using DOM nodes to avoid treating any text as raw HTML
+    const existing = document.createTextNode(el.textContent + '\u00A0');
+    const badge = document.createElement('span');
+    badge.className = 'demo-badge';
+    badge.textContent = 'Demo mode';
+    const sep = document.createTextNode(' \u2014 ');
+    const link = document.createElement('a');
+    link.href = 'firebase-config.js';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'configure Firebase';
+    const suffix = document.createTextNode(' for live data');
+
+    el.textContent = '';
+    el.append(existing, badge, sep, link, suffix);
 }
