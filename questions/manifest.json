@@ -2,9 +2,10 @@
   "files": [
     "billing-pricing.json",
     "cloud-concepts.json",
+    "kubernetes-fundamentals.json",
     "management-governance.json",
     "security-compliance.json",
     "technology-services.json"
   ],
-  "generated": "2026-07-08T11:21:49.132Z"
+  "generated": "2026-07-08T12:37:00.005Z"
 }
