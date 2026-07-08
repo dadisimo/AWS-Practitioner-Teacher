@@ -1,5 +1,5 @@
 // Global data object
-let awsData = {
+let appData = {
     sections: []
 };
 
@@ -14,7 +14,8 @@ let state = {
     followUpIndex: 0,
     completedSections: [],
     pausedAtQuestion: null,  // Track where we paused the quiz
-    needsRemediation: false  // Flag to know if we need to show doc + follow-up
+    needsRemediation: false, // Flag to know if we need to show doc + follow-up
+    previousScreen: null     // Track screen to return to from stats
 };
 
 // Validate section format
@@ -93,14 +94,14 @@ async function loadQuestionData() {
         
         const sections = await Promise.all(loadPromises);
         
-        // Filter out null values and add to awsData
-        awsData.sections = sections.filter(section => section !== null);
+        // Filter out null values and add to appData
+        appData.sections = sections.filter(section => section !== null);
         
-        if (awsData.sections.length === 0) {
+        if (appData.sections.length === 0) {
             throw new Error('No valid question sections loaded');
         }
         
-        console.log(`Loaded ${awsData.sections.length} question sections`);
+        console.log(`Loaded ${appData.sections.length} question sections`);
         return true;
     } catch (error) {
         console.error('Error loading question data:', error);
@@ -123,6 +124,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (loaded) {
         loadProgress();
         renderSections();
+        populateWelcomeSections();
+        trackVisit();
         
         // Remove loading message
         if (welcomeScreen) {
@@ -136,17 +139,26 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 // Save progress to localStorage
 function saveProgress() {
-    localStorage.setItem('awsPractitionerProgress', JSON.stringify(state));
+    localStorage.setItem('practitionerProgress', JSON.stringify(state));
 }
 
 // Load progress from localStorage
 function loadProgress() {
-    const saved = localStorage.getItem('awsPractitionerProgress');
+    const saved = localStorage.getItem('practitionerProgress') || localStorage.getItem('awsPractitionerProgress');
     if (saved) {
         const savedState = JSON.parse(saved);
         state.sectionProgress = savedState.sectionProgress || {};
         state.completedSections = savedState.completedSections || [];
     }
+}
+
+// Populate the welcome screen sections list dynamically
+function populateWelcomeSections() {
+    const list = document.getElementById('welcome-sections-list');
+    if (!list) return;
+    list.innerHTML = appData.sections.map(s =>
+        `<li>${s.icon} ${s.title}</li>`
+    ).join('');
 }
 
 // Show a specific screen
@@ -176,7 +188,7 @@ function renderSections() {
     const container = document.getElementById('sections-container');
     container.innerHTML = '';
     
-    awsData.sections.forEach(section => {
+    appData.sections.forEach(section => {
         const isCompleted = state.completedSections.includes(section.id);
         const card = document.createElement('div');
         card.className = `section-card ${isCompleted ? 'completed' : ''}`;
@@ -217,7 +229,7 @@ function shuffleQuestionOptions(question) {
 
 // Start a section
 function startSection(sectionId) {
-    const section = awsData.sections.find(s => s.id === sectionId);
+    const section = appData.sections.find(s => s.id === sectionId);
     if (!section) return;
     
     // Create a shuffled copy of questions for this session
@@ -516,7 +528,7 @@ function completeSection() {
 
 // Continue to next section
 function continueToNextSection() {
-    if (state.completedSections.length === awsData.sections.length) {
+    if (state.completedSections.length === appData.sections.length) {
         // All sections completed!
         showFinalCompletion();
     } else {
@@ -531,8 +543,8 @@ function showSectionSelection() {
 
 // Show final completion
 function showFinalCompletion() {
-    const totalSections = awsData.sections.length;
-    const totalQuestions = awsData.sections.reduce((sum, section) => sum + section.questions.length, 0);
+    const totalSections = appData.sections.length;
+    const totalQuestions = appData.sections.reduce((sum, section) => sum + section.questions.length, 0);
     
     document.getElementById('overall-stats').innerHTML = `
         <h3>Overall Achievement</h3>
@@ -573,7 +585,7 @@ function restartCourse() {
 
 // Update progress bar
 function updateProgress() {
-    const totalSections = awsData.sections.length;
+    const totalSections = appData.sections.length;
     const completedCount = state.completedSections.length;
     const percentage = Math.round((completedCount / totalSections) * 100);
     

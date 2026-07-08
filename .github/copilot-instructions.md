@@ -1,8 +1,8 @@
-# AWS Practitioner Teacher — Copilot Coding Agent Instructions
+# Any-Practitioner-Teacher — Copilot Coding Agent Instructions
 
 ## Overview
 
-This is an AWS Cloud Practitioner exam preparation quiz app. Quiz data lives as individual JSON files in the `questions/` directory. Users may drop raw/unformatted content into the `unformatted/` directory for processing.
+This is an interactive quiz and study platform for **any subject**. Quiz data lives as individual JSON files in the `questions/` directory. Users may drop raw/unformatted content into the `unformatted/` directory for processing.
 
 ## Your Task: Process Unformatted Files
 
@@ -10,8 +10,8 @@ When a file (`.json`, `.txt`, `.md`, or any text file) appears in the `unformatt
 
 ### Step 1 — Understand the Content
 
-- Read the file and determine what AWS topic(s) it covers.
-- The content may be raw questions, study notes, bullet points, exam dumps, or any unstructured text about AWS services.
+- Read the file and determine what topic(s) it covers.
+- The content may be raw questions, study notes, bullet points, exam dumps, or any unstructured text about any subject.
 - Identify all questions, answers, and explanations present in the file.
 
 ### Step 2 — Check for Duplicates
@@ -24,19 +24,15 @@ When a file (`.json`, `.txt`, `.md`, or any text file) appears in the `unformatt
 
 ### Step 3 — Determine Target Section
 
-- Decide which existing section the questions belong to based on topic:
-  - `cloud-concepts.json` — Cloud fundamentals, Well-Architected Framework, Shared Responsibility Model, global infrastructure, deployment models, scalability, elasticity
-  - `security-compliance.json` — IAM, security services, compliance programs, encryption, AWS Shield, WAF, GuardDuty, Inspector
-  - `technology-services.json` — EC2, S3, Lambda, RDS, DynamoDB, VPC, CloudFront, Route 53, ECS, EKS, and other core services
-  - `billing-pricing.json` — Pricing models, Free Tier, Cost Explorer, Budgets, TCO Calculator, Reserved/Spot/On-Demand instances, billing
-  - `management-governance.json` — CloudWatch, CloudTrail, Config, Organizations, Trusted Advisor, Systems Manager, Control Tower
-- If the content covers a **new topic** that doesn't fit existing sections, create a **new JSON file** in `questions/` with an appropriate `id`, `title`, `icon`, and `description`.
+- Examine the existing `questions/` files and decide which section best fits the new content.
+- Group questions by logical topic or subject area.
+- If the content covers a **new topic** that doesn't fit any existing section, create a **new JSON file** in `questions/` with an appropriate `id`, `title`, `icon`, and `description`.
 
 ### Step 4 — Fill in Missing Data
 
 If the source material is incomplete (e.g., questions without explanations, or just study notes without questions), you must **research and generate** the missing parts:
 
-- **Missing explanations:** Write a clear, concise explanation of why the correct answer is right. Reference official AWS documentation concepts.
+- **Missing explanations:** Write a clear, concise explanation of why the correct answer is right.
 - **Missing wrong options:** Create 3 plausible but incorrect answer options. They should be realistic enough to challenge students.
 - **Missing questions:** If the file contains study notes or topics but no questions, generate at least 5 high-quality multiple-choice questions from the material.
 - **Missing documentation:** Write comprehensive HTML study material covering the topic. Follow the format of existing `documentation` fields — use `<h3>`, `<h4>`, `<p>`, `<ul>`, `<ol>`, `<li>`, `<strong>` tags.
@@ -123,7 +119,7 @@ In your PR description, include:
 
 ## Quality Standards
 
-- All questions must be factually accurate and aligned with the **current** AWS Cloud Practitioner (CLF-C02) exam.
+- All questions must be factually accurate and relevant to the subject being studied.
 - Explanations should be educational — not just "the answer is X" but WHY it's correct.
 - Wrong options should be plausible. Avoid obviously absurd distractors.
 - Each section should have at least 5 `followUpQuestions`.

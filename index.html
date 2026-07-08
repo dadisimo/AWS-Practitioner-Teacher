@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AWS Practitioner Exam Preparation - Interactive Quiz and Learning Platform">
-    <title>AWS Practitioner Teacher</title>
+    <meta name="description" content="Any Practitioner Teacher - Interactive Quiz and Learning Platform for Any Subject">
+    <title>Any Practitioner Teacher</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
         <header>
-            <h1>🎓 AWS Practitioner Teacher</h1>
-            <p class="subtitle">Master AWS Cloud Practitioner Certification</p>
+            <h1>🎓 Any Practitioner Teacher</h1>
+            <p class="subtitle">Universal Interactive Learning Platform</p>
+            <button class="stats-btn" onclick="showStats()" title="View Statistics" aria-label="View Statistics">📊</button>
         </header>
 
         <!-- Progress Tracker -->
@@ -26,29 +28,25 @@
         <!-- Welcome Screen -->
         <div id="welcome-screen" class="screen active">
             <div class="welcome-content">
-                <h2>Welcome to Your AWS Learning Journey! 🚀</h2>
-                <p>This interactive platform will help you prepare for the AWS Certified Cloud Practitioner exam.</p>
+                <h2>Welcome to Your Learning Journey! 🚀</h2>
+                <p>This interactive platform adapts to any subject. Drop study materials into the <code>unformatted/</code> folder and they are automatically turned into quiz sections.</p>
                 
                 <div class="info-box">
                     <h3>How It Works:</h3>
                     <ol>
-                        <li>Answer quiz questions for each AWS section</li>
+                        <li>Answer quiz questions for each section</li>
                         <li>Get a question wrong? Documentation opens immediately</li>
                         <li>Study the material, then answer 3 follow-up questions correctly</li>
                         <li>Fail 1 follow-up question? Back to documentation</li>
                         <li>Pass the follow-up? Continue with the next quiz question</li>
-                        <li>Master all sections to become exam-ready!</li>
+                        <li>Master all sections to complete your learning goal!</li>
                     </ol>
                 </div>
 
                 <div class="sections-overview">
-                    <h3>Sections Covered:</h3>
-                    <ul>
-                        <li>☁️ Cloud Concepts & Architecture</li>
-                        <li>🔒 Security & Compliance</li>
-                        <li>💻 Technology & Services</li>
-                        <li>💰 Billing & Pricing</li>
-                        <li>⚙️ Management & Governance</li>
+                    <h3>Available Sections:</h3>
+                    <ul id="welcome-sections-list">
+                        <li>Loading sections…</li>
                     </ul>
                 </div>
 
@@ -106,19 +104,53 @@
         <!-- Final Completion Screen -->
         <div id="final-completion-screen" class="screen">
             <div class="final-completion-content">
-                <h2>🏆 Exam Ready!</h2>
-                <p>You've completed all sections and are now fully prepared for the AWS Certified Cloud Practitioner exam!</p>
+                <h2>🏆 All Done!</h2>
+                <p>You've completed all sections! Great work — you're fully prepared for your exam or assessment!</p>
                 <div id="overall-stats" class="stats-box"></div>
                 <div class="certificate">
                     <h3>Certificate of Completion</h3>
-                    <p>You have successfully completed the AWS Practitioner Teacher program</p>
+                    <p>You have successfully completed the Any Practitioner Teacher program</p>
                     <p class="date" id="completion-date"></p>
                 </div>
                 <button class="btn btn-primary" onclick="restartCourse()">Restart Course</button>
             </div>
         </div>
+
+        <!-- Stats Screen -->
+        <div id="stats-screen" class="screen">
+            <div class="stats-header">
+                <h2>📊 Usage Statistics</h2>
+                <button class="btn btn-secondary btn-small" onclick="closeStats()">✕ Back to Learning</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Monthly Sessions</h3>
+                    <div class="big-stat" id="monthly-sessions">—</div>
+                    <p>sessions this month (this device)</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Sessions</h3>
+                    <div class="big-stat" id="total-sessions">—</div>
+                    <p>all-time sessions (this device)</p>
+                </div>
+                <div class="stat-card wide">
+                    <h3>Daily Activity — Last 30 Days</h3>
+                    <canvas id="visit-chart"></canvas>
+                </div>
+                <div class="stat-card wide">
+                    <h3>🗺️ Connected Users</h3>
+                    <div id="map-container"></div>
+                    <p id="map-status" class="map-status">Loading your location…</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPmI=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="stats.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

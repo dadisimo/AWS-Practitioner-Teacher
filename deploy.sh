@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# AWS Practitioner Teacher - Deployment Script
+# Any Practitioner Teacher - Deployment Script
 
-echo "🚀 AWS Practitioner Teacher - Deployment Guide"
+echo "🚀 Any Practitioner Teacher - Deployment Guide"
 echo "================================================"
 echo ""
 
@@ -14,20 +14,20 @@ echo ""
 echo "1️⃣  GitHub Pages (Recommended - Free)"
 echo "   Steps:"
 echo "   • Go to https://github.com/new"
-echo "   • Repository name: AWS-Practitioner-Teacher"
+echo "   • Repository name: Any-Practitioner-Teacher"
 echo "   • Make it Public"
 echo "   • DO NOT initialize with README"
 echo "   • Click 'Create repository'"
 echo "   • Then run these commands:"
 echo ""
-echo "   git remote add origin https://github.com/YOUR-USERNAME/AWS-Practitioner-Teacher.git"
+echo "   git remote add origin https://github.com/YOUR-USERNAME/Any-Practitioner-Teacher.git"
 echo "   git branch -M main"
 echo "   git push -u origin main"
 echo ""
 echo "   • Go to repository Settings → Pages"
 echo "   • Source: Deploy from branch 'main'"
 echo "   • Save"
-echo "   • Your site will be live at: https://YOUR-USERNAME.github.io/AWS-Practitioner-Teacher/"
+echo "   • Your site will be live at: https://YOUR-USERNAME.github.io/Any-Practitioner-Teacher/"
 echo ""
 
 echo "2️⃣  Netlify (Easiest - Free)"
