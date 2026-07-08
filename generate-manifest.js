@@ -10,6 +10,8 @@
  * 
  * This creates questions/manifest.json which tells the app
  * which quiz files to load.
+ * 
+ * Works for Any-Practitioner-Teacher — subject-agnostic.
  */
 
 const fs = require('fs');

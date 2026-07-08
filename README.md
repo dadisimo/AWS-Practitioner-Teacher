@@ -1,159 +1,89 @@
-# AWS Practitioner Teacher 🎓
+# Any Practitioner Teacher 🎓
 
-An interactive mobile-first web application for learning and preparing for the AWS Certified Cloud Practitioner exam.
+A universal, interactive mobile-first web application for learning and exam preparation on **any subject**. Drop your study materials into the `unformatted/` folder and Copilot Coding Agent automatically builds quiz sections for you.
 
 ## Features
 
-- **5 Comprehensive Sections** covering all exam topics:
-  - ☁️ Cloud Concepts & Architecture
-  - 🔒 Security & Compliance
-  - 💻 Technology & Services
-  - 💰 Billing & Pricing
-  - ⚙️ Management & Governance
-
-- **10+ Questions per Section** - Comprehensive coverage of each topic
+- **Universal Subject Support** — Works for AWS, Kubernetes, Networking, History, Medicine, Law, or anything else
+- **Auto-generated Sections** — Add any `.json`, `.txt`, or `.md` file to `unformatted/` and the agent creates structured quiz sections
 - **Interactive Learning Flow**:
   - Take a quiz for each section
-  - Incorrect answers lead to detailed documentation
+  - Incorrect answers open detailed documentation
   - Follow-up quiz with 3 questions to reinforce learning
   - Must answer all 3 correctly to proceed (one wrong answer returns you to documentation)
+- **📊 Usage Statistics**:
+  - Monthly session chart (per-device, stored locally)
+  - 🗺️ Live world map showing where learners are connected (real-time with optional Firebase, demo mode without)
+- **Progress Tracking** — Saved automatically in browser localStorage
+- **Mobile-Responsive Design** — Study anywhere on any device
+- **Certificate of Completion** — Celebrate finishing all sections
 
-- **Progress Tracking** - Your progress is saved automatically
-- **Mobile-Responsive Design** - Study anywhere on any device
-- **Detailed Documentation** - Comprehensive study guides for each section
-- **Certificate of Completion** - Celebrate your achievement when you finish all sections
-
-## How to Use
-
-1. Open `index.html` in your web browser
-2. Click "Start Learning" on the welcome screen
-3. Choose a section to begin
-4. Complete the quiz
-5. If you get any wrong answers, study the documentation
-6. Pass the follow-up quiz (3/3 correct) to complete the section
-7. Complete all sections to become exam-ready!
-
-## Technologies Used
-
-- HTML5
-- CSS3 (with mobile-first responsive design)
-- Vanilla JavaScript (no frameworks required)
-- LocalStorage for progress tracking
-
-## Installation
-
-No installation required! Simply clone this repository and open `index.html` in your web browser:
+## Quick Start
 
 ```bash
 git clone <repository-url>
-cd AWS_practitioner_teacher
-open index.html
-```
-
-Or use a local server:
-
-```bash
+cd Any-Practitioner-Teacher
+# Open index.html in your browser, or run a local server:
 python3 -m http.server 8000
-# Then visit http://localhost:8000
+# Visit http://localhost:8000
 ```
 
-## Publishing
+> **Note:** The app loads quiz files via `fetch()`. You must open it via a local server (not `file://`) for it to work correctly.
 
-### GitHub Pages
-1. Push this repository to GitHub
-2. Go to Settings → Pages
-3. Select the main branch as source
-4. Your site will be available at `https://yourusername.github.io/AWS_practitioner_teacher/`
+## Adding Your Own Content
 
-### Netlify
-1. Drag and drop the project folder to Netlify
-2. Your site will be live instantly with a custom URL
+1. Put any study material (questions, notes, exam dumps) in the `unformatted/` folder.
+2. Push to your repo — Copilot Coding Agent will automatically process the file, create/update sections, regenerate the manifest, and open a PR.
 
-### Vercel
-1. Import the repository to Vercel
-2. Deploy with one click
+Or run the agent manually on a specific file.
 
 ## Project Structure
 
 ```
-AWS_practitioner_teacher/
-├── index.html          # Main HTML structure
-├── styles.css          # Responsive CSS styles
-├── app.js              # Application logic
-├── data.js             # AWS exam content and questions
-└── README.md           # This file
+Any-Practitioner-Teacher/
+├── index.html              # Main HTML structure
+├── styles.css              # Responsive CSS styles
+├── app.js                  # Core quiz application logic
+├── stats.js                # Stats screen, visit chart, live map
+├── firebase-config.js      # Optional Firebase config for real-time map
+├── generate-manifest.js    # CLI: regenerate questions/manifest.json
+├── questions/
+│   ├── manifest.json       # Auto-generated list of active sections
+│   └── *.json              # One JSON file per quiz section
+├── unformatted/            # Drop new content here for auto-processing
+└── README.md               # This file
 ```
 
-## Features in Detail
+## Enabling the Live Connected-Users Map
 
-### Quiz System
-- Multiple-choice questions
-- Immediate feedback
-- Explanation for each answer
-- Progress tracking
+The stats map works out of the box in **demo mode** (shows your own location + example markers). To show real connected users:
 
-### Documentation
-- Comprehensive coverage of AWS topics
-- Real exam-focused content
-- Easy-to-understand explanations
-- Code examples where applicable
+1. Create a free Firebase project at https://console.firebase.google.com
+2. Add a **Realtime Database** (start in test mode)
+3. Open `firebase-config.js` and fill in your project's config values
+4. Set `FIREBASE_ENABLED = true`
 
-### Follow-up Questions
-- Reinforces learning after reading documentation
-- Requires 3 correct answers to proceed
-- Returns to documentation on wrong answer
-- Shuffled questions for variety
+Firebase web config values are **not secrets** and are safe to commit.
 
-### Progress Tracking
-- Automatic save to browser localStorage
-- Visual progress bar
-- Section completion tracking
-- Resume where you left off
+## Technologies Used
 
-## Content Coverage
+- HTML5, CSS3, Vanilla JavaScript (no framework)
+- [Leaflet.js](https://leafletjs.com/) — interactive map
+- [Chart.js](https://www.chartjs.org/) — visit history chart
+- [ipapi.co](https://ipapi.co/) — IP-based geolocation (free tier)
+- [OpenStreetMap](https://www.openstreetmap.org/) — map tiles
+- Firebase Realtime Database (optional) — live presence
 
-### Cloud Concepts & Architecture
-- Cloud computing fundamentals
-- AWS Global Infrastructure
-- Well-Architected Framework
-- Shared Responsibility Model
+## Publishing
 
-### Security & Compliance
-- IAM (Users, Groups, Roles, Policies)
-- Security services (CloudTrail, GuardDuty, etc.)
-- Encryption and data protection
-- Compliance programs
+### GitHub Pages
+1. Push to GitHub
+2. Go to **Settings → Pages**, select the `main` branch
+3. Your site is live at `https://YOUR-USERNAME.github.io/Any-Practitioner-Teacher/`
 
-### Technology & Services
-- Compute (EC2, Lambda, ECS)
-- Storage (S3, EBS, EFS)
-- Database (RDS, DynamoDB, Aurora)
-- Networking (VPC, CloudFront, Route 53)
-
-### Billing & Pricing
-- AWS pricing models
-- Cost management tools
-- Free Tier details
-- Support plans
-
-### Management & Governance
-- CloudFormation
-- CloudWatch
-- AWS Organizations
-- Trusted Advisor
+### Netlify / Vercel
+Drag-and-drop the folder on Netlify, or import the repo on Vercel — both deploy instantly for free.
 
 ## License
 
-This project is created for educational purposes. AWS and related trademarks are property of Amazon Web Services, Inc.
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## Disclaimer
-
-This is an educational tool to help prepare for the AWS Certified Cloud Practitioner exam. It is not affiliated with or endorsed by Amazon Web Services. Always refer to official AWS documentation and training materials for the most up-to-date information.
-
----
-
-**Good luck with your AWS certification journey! 🚀**
+Educational use. All trademarks belong to their respective owners.

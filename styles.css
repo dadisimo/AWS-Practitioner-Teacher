@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #FF9900;
-    --secondary-color: #232F3E;
+    --primary-color: #4F46E5;
+    --secondary-color: #1E293B;
     --success-color: #4CAF50;
     --error-color: #f44336;
     --text-color: #333;
@@ -42,6 +42,7 @@ header {
     color: var(--white);
     padding: 30px 20px;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -52,6 +53,27 @@ header h1 {
 .subtitle {
     font-size: 1rem;
     opacity: 0.9;
+}
+
+/* Stats button in header */
+.stats-btn {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.stats-btn:hover {
+    background: rgba(255, 255, 255, 0.28);
 }
 
 /* Progress Bar */
@@ -570,4 +592,137 @@ header h1 {
 
 .answer-btn.correct {
     animation: pulse 0.5s ease;
+}
+
+/* =============================================
+   Stats Screen
+   ============================================= */
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    min-width: auto;
+    width: auto;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats-header h2 {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-card {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card.wide {
+    grid-column: 1 / -1;
+    text-align: left;
+}
+
+.stat-card h3 {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+.big-stat {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    line-height: 1;
+}
+
+.stat-card > p {
+    font-size: 0.82rem;
+    color: #888;
+}
+
+/* Map */
+#map-container {
+    height: 360px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.map-status {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-top: 10px;
+}
+
+.demo-badge {
+    background: #e2e8f0;
+    color: #64748b;
+    font-size: 0.78rem;
+    padding: 2px 7px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Leaflet marker dots */
+.marker-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.marker-dot.current-user {
+    width: 18px;
+    height: 18px;
+    background: var(--primary-color);
+    animation: pulse-marker 2s infinite;
+}
+
+.marker-dot.other-user {
+    background: var(--success-color);
+}
+
+.marker-dot.demo-user {
+    background: #94a3b8;
+}
+
+@keyframes pulse-marker {
+    0%   { box-shadow: 0 0 0 0   rgba(79, 70, 229, 0.5); }
+    70%  { box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);   }
+    100% { box-shadow: 0 0 0 0   rgba(79, 70, 229, 0);   }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card.wide {
+        grid-column: 1;
+    }
+
+    #map-container {
+        height: 280px;
+    }
 }
