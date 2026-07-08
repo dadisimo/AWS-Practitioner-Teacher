@@ -1,0 +1,301 @@
+{
+  "id": "kubernetes-fundamentals",
+  "title": "Kubernetes Fundamentals",
+  "icon": "☸️",
+  "description": "Learn Kubernetes architecture, workloads, networking, and core operational concepts",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Kubernetes primarily used for?",
+      "options": [
+        "Writing container images",
+        "Replacing Linux entirely",
+        "Orchestrating and managing containerized applications at scale",
+        "Serving as a programming language for cloud-native apps"
+      ],
+      "correct": 2,
+      "explanation": "Kubernetes is a container orchestration platform that automates deployment, scaling, networking, and lifecycle management for containerized workloads."
+    },
+    {
+      "id": 2,
+      "question": "What is the smallest deployable unit in Kubernetes?",
+      "options": [
+        "Pod",
+        "Deployment",
+        "Node",
+        "Cluster"
+      ],
+      "correct": 0,
+      "explanation": "A Pod is the smallest deployable object in Kubernetes. It can run one or more closely related containers that share networking and storage."
+    },
+    {
+      "id": 3,
+      "question": "Which Kubernetes component stores the cluster's source-of-truth state?",
+      "options": [
+        "kube-scheduler",
+        "kubelet",
+        "CoreDNS",
+        "etcd"
+      ],
+      "correct": 3,
+      "explanation": "etcd is the distributed key-value store that persists Kubernetes cluster state, configuration, and metadata."
+    },
+    {
+      "id": 4,
+      "question": "What does the kube-scheduler do?",
+      "options": [
+        "Stores Secret data",
+        "Assigns newly created Pods to suitable nodes",
+        "Builds container images",
+        "Rotates TLS certificates automatically"
+      ],
+      "correct": 1,
+      "explanation": "The kube-scheduler watches for unscheduled Pods and selects a node for each Pod based on resource requirements, policies, and placement rules."
+    },
+    {
+      "id": 5,
+      "question": "Which component runs on each worker node and makes sure containers described by Pod specs are running?",
+      "options": [
+        "etcd",
+        "kube-apiserver",
+        "kubelet",
+        "kube-controller-manager"
+      ],
+      "correct": 2,
+      "explanation": "The kubelet is the node agent. It communicates with the control plane and ensures the containers defined for Pods on that node are running properly."
+    },
+    {
+      "id": 6,
+      "question": "What is the main purpose of a Deployment?",
+      "options": [
+        "To manage stateless application rollouts and maintain desired replicas",
+        "To replace kube-proxy",
+        "To expose a Service externally",
+        "To provide persistent storage"
+      ],
+      "correct": 0,
+      "explanation": "A Deployment declaratively manages stateless applications by creating ReplicaSets, maintaining the desired number of replicas, and supporting rolling updates and rollbacks."
+    },
+    {
+      "id": 7,
+      "question": "What does a ReplicaSet ensure?",
+      "options": [
+        "That every node has the same operating system",
+        "That a specified number of Pod replicas are running",
+        "That external DNS records stay synchronized",
+        "That containers share the same filesystem"
+      ],
+      "correct": 1,
+      "explanation": "A ReplicaSet keeps the desired number of matching Pods running. If a Pod fails, the ReplicaSet creates a replacement."
+    },
+    {
+      "id": 8,
+      "question": "What does a ClusterIP Service provide?",
+      "options": [
+        "Direct public internet access from every Pod",
+        "A node-level SSH endpoint",
+        "An internal virtual IP for accessing a set of Pods inside the cluster",
+        "A persistent disk for stateful workloads"
+      ],
+      "correct": 2,
+      "explanation": "ClusterIP is the default Service type. It exposes an application on an internal cluster IP so other workloads inside the cluster can reach it reliably."
+    },
+    {
+      "id": 9,
+      "question": "How does a NodePort Service expose an application?",
+      "options": [
+        "By turning each Pod into its own load balancer",
+        "By creating a VPN tunnel to the control plane",
+        "By writing traffic rules directly into etcd",
+        "By opening the same static port on each node's IP address"
+      ],
+      "correct": 3,
+      "explanation": "A NodePort Service exposes the application on a port of every node, allowing external clients to access the Service through any node IP and that port."
+    },
+    {
+      "id": 10,
+      "question": "What kind of data should typically be stored in a ConfigMap?",
+      "options": [
+        "Non-sensitive configuration such as feature flags or application settings",
+        "TLS private keys only",
+        "Container image layers",
+        "Node resource metrics"
+      ],
+      "correct": 0,
+      "explanation": "ConfigMaps are designed for non-sensitive configuration data, such as environment-specific settings, command-line arguments, or configuration files."
+    },
+    {
+      "id": 11,
+      "question": "Why would you use a Secret instead of a ConfigMap?",
+      "options": [
+        "Secrets automatically scale Deployments",
+        "Secrets are intended for sensitive values such as passwords, tokens, and keys",
+        "Secrets can only be used by StatefulSets",
+        "Secrets replace Services for secure networking"
+      ],
+      "correct": 1,
+      "explanation": "Secrets are used for sensitive information. They help separate confidential data from regular configuration and can be handled with stricter access controls."
+    },
+    {
+      "id": 12,
+      "question": "What problem do Namespaces solve in Kubernetes?",
+      "options": [
+        "They create new worker nodes automatically",
+        "They encrypt all traffic between Pods",
+        "They provide logical isolation and organization for resources in the same cluster",
+        "They convert stateless applications into stateful ones"
+      ],
+      "correct": 2,
+      "explanation": "Namespaces let teams organize and isolate resources within one cluster, which is useful for separating environments, applications, or teams."
+    },
+    {
+      "id": 13,
+      "question": "What happens during a rolling update managed by a Deployment?",
+      "options": [
+        "All Pods are deleted before any new ones are created",
+        "The cluster is restarted node by node",
+        "Only etcd is updated while workloads stay the same",
+        "Old Pods are replaced gradually with new Pods to reduce downtime"
+      ],
+      "correct": 3,
+      "explanation": "Rolling updates replace Pods incrementally so the application can stay available while a new version is introduced."
+    },
+    {
+      "id": 14,
+      "question": "Why is a Kubernetes Service commonly used in front of Pods?",
+      "options": [
+        "It provides a stable endpoint and load balancing for a changing set of Pods",
+        "It compiles YAML manifests into binaries",
+        "It stores application logs permanently",
+        "It prevents Pods from restarting"
+      ],
+      "correct": 0,
+      "explanation": "Pods are ephemeral and their IP addresses can change. A Service gives clients a stable way to reach the application and can distribute traffic across multiple Pods."
+    },
+    {
+      "id": 15,
+      "question": "What is the job of the container runtime on a Kubernetes node?",
+      "options": [
+        "To schedule Pods across the cluster",
+        "To pull images and run containers on the node",
+        "To expose Services with external IP addresses",
+        "To manage RBAC permissions"
+      ],
+      "correct": 1,
+      "explanation": "The container runtime, such as containerd, is responsible for fetching images and running containers on the node as instructed by the kubelet."
+    },
+    {
+      "id": 16,
+      "question": "What does kube-proxy primarily handle?",
+      "options": [
+        "Backing up etcd snapshots",
+        "Approving TLS certificates",
+        "Implementing Service networking and forwarding traffic to Pods",
+        "Scheduling control plane components"
+      ],
+      "correct": 2,
+      "explanation": "kube-proxy maintains network rules on each node so traffic sent to a Service can be forwarded to one of the matching backend Pods."
+    },
+    {
+      "id": 17,
+      "question": "Which component is the main API entry point for Kubernetes?",
+      "options": [
+        "kube-controller-manager",
+        "kubelet",
+        "kube-scheduler",
+        "kube-apiserver"
+      ],
+      "correct": 3,
+      "explanation": "The kube-apiserver exposes the Kubernetes API and serves as the front door for users, automation, and internal cluster components."
+    },
+    {
+      "id": 18,
+      "question": "Which workload type is best suited for applications that need stable network identities and persistent storage?",
+      "options": [
+        "StatefulSet",
+        "Job",
+        "ReplicaSet",
+        "DaemonSet"
+      ],
+      "correct": 0,
+      "explanation": "StatefulSets are designed for stateful applications that need stable Pod identities, ordered rollout behavior, and persistent storage."
+    },
+    {
+      "id": 19,
+      "question": "What is a PersistentVolumeClaim (PVC) used for?",
+      "options": [
+        "To expose a Deployment over HTTPS",
+        "To request storage resources for a workload",
+        "To limit CPU and memory on a Pod",
+        "To define node labels"
+      ],
+      "correct": 1,
+      "explanation": "A PersistentVolumeClaim is a storage request made by a workload. Kubernetes uses it to bind the workload to suitable persistent storage."
+    },
+    {
+      "id": 20,
+      "question": "What does a DaemonSet ensure?",
+      "options": [
+        "Exactly one control plane per namespace",
+        "Exactly one Service per Deployment",
+        "A copy of a Pod runs on every matching node",
+        "All Pods restart at midnight"
+      ],
+      "correct": 2,
+      "explanation": "A DaemonSet is used for node-level agents, such as log collectors or monitoring agents, by ensuring a Pod runs on every relevant node."
+    }
+  ],
+  "documentation": "<h3>Kubernetes Fundamentals</h3><p>Kubernetes is an open-source container orchestration platform used to deploy, scale, and manage containerized applications. It helps teams run applications reliably across clusters of machines instead of managing individual containers by hand.</p><h4>Cluster Architecture</h4><p>A Kubernetes cluster is split into a control plane and worker nodes.</p><ul><li><strong>Control plane:</strong> Makes global decisions about the cluster and maintains the desired state.</li><li><strong>Worker nodes:</strong> Run the application workloads inside Pods.</li></ul><h4>Key Control Plane Components</h4><ul><li><strong>kube-apiserver:</strong> The front door to the cluster. All API requests pass through it.</li><li><strong>etcd:</strong> Distributed key-value store that holds cluster state and configuration.</li><li><strong>kube-scheduler:</strong> Chooses a suitable node for each unscheduled Pod.</li><li><strong>kube-controller-manager:</strong> Runs controllers that continuously reconcile actual state with desired state.</li></ul><h4>Key Worker Node Components</h4><ul><li><strong>kubelet:</strong> Node agent that ensures Pods are running as defined.</li><li><strong>kube-proxy:</strong> Maintains networking rules for Services and traffic forwarding.</li><li><strong>Container runtime:</strong> Pulls images and runs containers on the node.</li></ul><h4>Core Kubernetes Objects</h4><ul><li><strong>Pod:</strong> Smallest deployable unit, containing one or more containers that share networking and storage.</li><li><strong>Deployment:</strong> Manages stateless application releases, scaling, rolling updates, and rollbacks.</li><li><strong>ReplicaSet:</strong> Keeps the required number of matching Pods running.</li><li><strong>StatefulSet:</strong> Manages stateful applications that need stable identities and persistent data.</li><li><strong>DaemonSet:</strong> Ensures a Pod runs on every matching node, often for logging or monitoring agents.</li><li><strong>Job/CronJob:</strong> Runs finite or scheduled tasks rather than long-lived services.</li></ul><h4>Networking and Service Discovery</h4><p>Pods are replaceable, so their IP addresses can change. Kubernetes Services provide stable access to groups of Pods.</p><ul><li><strong>ClusterIP:</strong> Internal-only Service accessible within the cluster.</li><li><strong>NodePort:</strong> Exposes the Service on a static port on each node.</li><li><strong>LoadBalancer:</strong> Requests an external load balancer from the infrastructure provider.</li><li><strong>ExternalName:</strong> Maps a Service to an external DNS name.</li></ul><h4>Configuration and Secrets</h4><ul><li><strong>ConfigMap:</strong> Stores non-sensitive configuration such as flags, endpoints, and settings.</li><li><strong>Secret:</strong> Stores sensitive data such as passwords, API tokens, and certificates.</li><li><strong>Namespace:</strong> Organizes and isolates resources in the same cluster for teams, apps, or environments.</li></ul><h4>Storage</h4><p>Containers are often ephemeral, but many applications need durable data.</p><ul><li><strong>PersistentVolume (PV):</strong> Represents storage available to the cluster.</li><li><strong>PersistentVolumeClaim (PVC):</strong> A workload's request for storage.</li><li><strong>Volumes:</strong> Mount storage into Pods so data can survive container restarts.</li></ul><h4>Application Lifecycle</h4><ul><li><strong>Desired state:</strong> You declare what you want, and controllers work to keep the cluster in that state.</li><li><strong>Rolling updates:</strong> Deployments gradually replace old Pods with new ones to reduce downtime.</li><li><strong>Self-healing:</strong> Failed Pods can be recreated automatically by controllers such as Deployments and ReplicaSets.</li><li><strong>Scaling:</strong> Replica counts can be adjusted to handle changing demand.</li></ul><h4>Why Kubernetes Matters</h4><p>Kubernetes standardizes how teams package, deploy, and operate modern applications. It improves portability, supports automation, and helps applications stay available even as underlying containers and nodes change.</p>",
+  "followUpQuestions": [
+    {
+      "question": "Which Kubernetes object is typically used to manage rolling updates for a stateless web application?",
+      "options": [
+        "Deployment",
+        "Secret",
+        "Namespace",
+        "PersistentVolume"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which component is responsible for forwarding Service traffic to backend Pods on each node?",
+      "options": [
+        "etcd",
+        "kube-proxy",
+        "kube-scheduler",
+        "CoreDNS"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the default Service type used for internal-only communication inside a cluster?",
+      "options": [
+        "NodePort",
+        "ExternalName",
+        "ClusterIP",
+        "LoadBalancer"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which Kubernetes store keeps the authoritative cluster state?",
+      "options": [
+        "kubelet",
+        "ConfigMap",
+        "ReplicaSet",
+        "etcd"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What should you use for application passwords and API tokens?",
+      "options": [
+        "Secret",
+        "ConfigMap",
+        "Namespace",
+        "DaemonSet"
+      ],
+      "correct": 0
+    }
+  ]
+}
